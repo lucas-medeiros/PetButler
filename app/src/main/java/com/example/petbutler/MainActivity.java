@@ -102,8 +102,10 @@ public class MainActivity extends AppCompatActivity {
                 int duration = Toast.LENGTH_SHORT;
                 Context context = getApplicationContext();
                 final Toast toastCadastro = Toast.makeText(context, "Cadastro", duration);
-
                 toastCadastro.show();
+
+                Intent cadastroIntent = new Intent(MainActivity.this, CadastroActivity.class);
+                startActivity(cadastroIntent);
             }
         });
 
