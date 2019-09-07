@@ -41,7 +41,7 @@ public class CadastroActivity extends AppCompatActivity {
                     if(etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) == 0){
 
                         if(etNome.getText().toString().isEmpty() || etSenha.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etUsuario.getText().toString().isEmpty() ||
-                            etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty()){
+                            etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty()){ //verifica se algum dos campos está em branco
 
                             final Toast toastCampoBranco = Toast.makeText(getApplicationContext(), "Campo obrigatório não preenchido", Toast.LENGTH_SHORT);
 
