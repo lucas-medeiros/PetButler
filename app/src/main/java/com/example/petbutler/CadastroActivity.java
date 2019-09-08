@@ -44,14 +44,19 @@ public class CadastroActivity extends AppCompatActivity {
                             etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty()){ //verifica se algum dos campos está em branco
 
                             final Toast toastCampoBranco = Toast.makeText(getApplicationContext(), "Campo obrigatório não preenchido", Toast.LENGTH_SHORT);
+                            toastCampoBranco.show();
+
 
                         } else{
                             //SALVAR NO BD
+
+                            final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
+                            toastCadastroSuceso.show();
                         }
 
                     } else {
 
-                        final Toast toastSenhaDiferente = Toast.makeText(getApplicationContext(), "Campo de confiramr senha diferente da senha original", Toast.LENGTH_SHORT);
+                        final Toast toastSenhaDiferente = Toast.makeText(getApplicationContext(), "Campo de confirmar senha diferente da senha original", Toast.LENGTH_SHORT);
                         toastSenhaDiferente.show();
                     }
             }
