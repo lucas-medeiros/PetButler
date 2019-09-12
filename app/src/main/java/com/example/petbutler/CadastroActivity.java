@@ -13,6 +13,10 @@ import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
 
+
+    private static final int[] pesoCPF = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,17 +45,23 @@ public class CadastroActivity extends AppCompatActivity {
                     if(etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) == 0){
 
                         if(etNome.getText().toString().isEmpty() || etSenha.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etUsuario.getText().toString().isEmpty() ||
-                            etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty()){ //verifica se algum dos campos está em branco
+                            etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty() || (radioGroup.getCheckedRadioButtonId() == -1)){ //verifica se algum dos campos está em branco
 
                             final Toast toastCampoBranco = Toast.makeText(getApplicationContext(), "Campo obrigatório não preenchido", Toast.LENGTH_SHORT);
                             toastCampoBranco.show();
 
 
-                        } else{
-                            //SALVAR NO BD
+                        } else {
+                            if (isValidCPF(etCPF.getText().toString())) {
 
-                            final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
-                            toastCadastroSuceso.show();
+                                //SALVAR NO BD
+
+                                final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
+                                toastCadastroSuceso.show();
+                            } else {
+                                final Toast toastCPFinvalido = Toast.makeText(getApplicationContext(), "CPF inválido", Toast.LENGTH_SHORT);
+                                toastCPFinvalido.show();
+                            }
                         }
 
                     } else {
@@ -61,5 +71,24 @@ public class CadastroActivity extends AppCompatActivity {
                     }
             }
         });
+
+    }
+
+    static public int calcularDigito(String str, int[] peso){
+        int soma = 0;
+        for (int indice=str.length()-1, digito; indice >= 0; indice-- ) {
+            digito = Integer.parseInt(str.substring(indice,indice+1));
+            soma += digito*peso[peso.length-str.length()+indice];
+        }
+        soma = 11 - soma % 11;
+        return soma > 9 ? 0 : soma;
+    }
+
+    public static boolean isValidCPF(String cpf) {
+        if ((cpf==null) || (cpf.length()!=11)) return false;
+
+        Integer digito1 = calcularDigito(cpf.substring(0,9), pesoCPF);
+        Integer digito2 = calcularDigito(cpf.substring(0,9) + digito1, pesoCPF);
+        return cpf.equals(cpf.substring(0,9) + digito1.toString() + digito2.toString());
     }
 }
