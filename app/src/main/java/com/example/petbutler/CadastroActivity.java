@@ -1,6 +1,7 @@
 package com.example.petbutler;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +14,7 @@ import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
 
-
     private static final int[] pesoCPF = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,6 @@ public class CadastroActivity extends AppCompatActivity {
         final EditText etCPF = (EditText) findViewById(R.id.et_CPF);
         final EditText etTelefone = (EditText) findViewById(R.id.et_telefone);
         final Button bConfirmar = (Button) findViewById(R.id.button_Confirmar);
-        final TextView tvCadastro = (TextView) findViewById(R.id.textView_cadastro);
         final TextView tvWho = (TextView) findViewById(R.id.tv_who);
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         final RadioButton radioButton_Cliente = (RadioButton) findViewById(R.id.radioButton_Cliente);
@@ -53,11 +51,16 @@ public class CadastroActivity extends AppCompatActivity {
 
                         } else {
                             if (isValidCPF(etCPF.getText().toString())) {
+                                final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
+                                toastCadastroSuceso.show();
 
                                 //SALVAR NO BD
 
-                                final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
-                                toastCadastroSuceso.show();
+                                Intent perfilClienteIntent = new Intent(CadastroActivity.this, PerfilClienteActivity.class);
+                                startActivity(perfilClienteIntent);
+
+                                //intent teste, apagar dps
+
                             } else {
                                 final Toast toastCPFinvalido = Toast.makeText(getApplicationContext(), "CPF inválido", Toast.LENGTH_SHORT);
                                 toastCPFinvalido.show();

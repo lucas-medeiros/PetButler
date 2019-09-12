@@ -10,9 +10,10 @@
         android:id="@+id/button_Confirmar"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="CONFIRMAR"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
@@ -20,12 +21,10 @@
         android:id="@+id/et_nome"
         android:layout_width="330dp"
         android:layout_height="45dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_cadastro" />
 
@@ -47,7 +46,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="CPF (apenas dígitos)"
-        android:inputType="textPersonName"
+        android:inputType="number|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +58,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="Telefone"
-        android:inputType="textPersonName"
+        android:inputType="number|textPersonName"
         android:phoneNumber="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -84,7 +83,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="Senha"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -97,7 +96,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="Confirmar senha"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -142,19 +141,6 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView_cadastro"
-        android:layout_width="202dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="4dp"
-        android:text="Cadastro"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tv_who"
         android:layout_width="187dp"
         android:layout_height="39dp"
@@ -166,5 +152,18 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_telefone" />
+
+    <TextView
+        android:id="@+id/textView_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Cadastro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
