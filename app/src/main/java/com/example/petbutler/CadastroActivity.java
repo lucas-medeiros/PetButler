@@ -13,9 +13,7 @@ import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
 
-
     private static final int[] pesoCPF = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
