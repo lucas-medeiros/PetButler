@@ -40,10 +40,17 @@ public class CadastroActivity extends AppCompatActivity {
         bConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    if(etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) == 0){
 
-                        if(etNome.getText().toString().isEmpty() || etSenha.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etUsuario.getText().toString().isEmpty() ||
-                            etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty() || (radioGroup.getCheckedRadioButtonId() == -1)){ //verifica se algum dos campos está em branco
+                //apenas para testes:
+                if((etSenha.getText().toString().compareTo("admin") == 0) && (etUsuario.getText().toString().compareTo("a") == 0)){
+                    Intent perfilClienteIntent = new Intent(CadastroActivity.this, PerfilClienteActivity.class);
+                    startActivity(perfilClienteIntent);
+                } else {
+
+                    if (etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) == 0) {
+
+                        if (etNome.getText().toString().isEmpty() || etSenha.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etUsuario.getText().toString().isEmpty() ||
+                                etCPF.getText().toString().isEmpty() || etSobrenome.getText().toString().isEmpty() || (radioGroup.getCheckedRadioButtonId() == -1)) { //verifica se algum dos campos está em branco
 
                             final Toast toastCampoBranco = Toast.makeText(getApplicationContext(), "Campo obrigatório não preenchido", Toast.LENGTH_SHORT);
                             toastCampoBranco.show();
@@ -72,6 +79,7 @@ public class CadastroActivity extends AppCompatActivity {
                         final Toast toastSenhaDiferente = Toast.makeText(getApplicationContext(), "Campo de confirmar senha diferente da senha original", Toast.LENGTH_SHORT);
                         toastSenhaDiferente.show();
                     }
+                }
             }
         });
 
