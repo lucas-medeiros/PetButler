@@ -11,7 +11,7 @@
         android:layout_width="155dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
-        android:text="CONFIRMAR"
+        android:text="@string/button_confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,18 +22,19 @@
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="Nome"
+        android:hint="@string/nome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_cadastro"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_sobrenome"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="Sobrenome"
+        android:hint="@string/sobrenome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -45,21 +46,21 @@
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="CPF (apenas dígitos)"
+        android:hint="@string/CPF"
         android:inputType="number|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_confirmasenha" />
+        app:layout_constraintTop_toBottomOf="@+id/et_confirmasenha"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_telefone"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="Telefone"
+        android:hint="@string/telefone"
         android:inputType="number|textPersonName"
-        android:phoneNumber="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,45 +71,46 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Usuário"
+        android:hint="@string/usuario"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_senha"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="Senha"
+        android:hint="@string/senha"
         android:inputType="textPassword"
-        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_usuario" />
+        app:layout_constraintTop_toBottomOf="@+id/et_usuario"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_confirmasenha"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="Confirmar senha"
+        android:hint="@string/confirmarSenha"
         android:inputType="textPassword"
-        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_senha" />
+        app:layout_constraintTop_toBottomOf="@+id/et_senha"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_email"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -129,14 +131,14 @@
             android:id="@+id/radioButton_Cliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cliente"
+            android:text="@string/cliente"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <RadioButton
             android:id="@+id/radioButton_Butler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Butler"
+            android:text="@string/butler"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </RadioGroup>
 
@@ -145,7 +147,7 @@
         android:layout_width="187dp"
         android:layout_height="39dp"
         android:layout_marginTop="20dp"
-        android:text="Quem é você?"
+        android:text="@string/who"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup"
@@ -160,7 +162,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Cadastro"
+        android:text="@string/cadastroTitle"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

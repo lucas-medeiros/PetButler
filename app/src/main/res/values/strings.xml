@@ -6,4 +6,20 @@
     <string name="hotelTitle">Hotel</string>
     <string name="entregasTitle">Entregas</string>
     <string name="transportesTitle">Transportes</string>
+    <string name="button_confirmar">CONFIRMAR</string>
+    <string name="cadastroTitle">Cadastro</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="email">E-mail</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="confirmarSenha">Confirmar senha</string>
+    <string name="CPF">CPF (apenas dígitos)</string>
+    <string name="telefone">Telefone</string>
+    <string name="resumo">Sobre você</string>
+    <string name="who">Quem é você?</string>
+    <string name="cliente">Cliente</string>
+    <string name="butler">Butler</string>
+    <string name="editarPerfilTitler">Editar Perfil</string>
+    <string name="fotoPerfil">Foto de perfil</string>
 </resources>

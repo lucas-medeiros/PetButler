@@ -10,7 +10,7 @@
         android:id="@+id/buttonWalking"
         android:layout_width="130dp"
         android:layout_height="80dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:text="@string/passeiosTitle"
         app:layout_constraintEnd_toStartOf="@+id/buttonHotel"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         android:id="@+id/buttonHotel"
         android:layout_width="130dp"
         android:layout_height="80dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="@string/hotelTitle"
@@ -50,16 +50,14 @@
 
     <ImageButton
         android:id="@+id/imageEmergency"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/descriptionEmergency"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProducts"
-        app:layout_constraintVertical_bias="0.74"
-        app:srcCompat="@android:drawable/ic_notification_overlay" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonTransport"
+        app:srcCompat="@mipmap/ic_local_hospital_foreground" />
 
     <TextView
         android:id="@+id/textViewTitle"
