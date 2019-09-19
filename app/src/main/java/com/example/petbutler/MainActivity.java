@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 if(foundusername && foundpassword){
                     //login
                     toastLoginSuccess.show();
+                    Intent mainIntent = new Intent(MainActivity.this, MainScreenActivity.class);
+                    startActivity(mainIntent);
 
                 }else if(foundusername && (foundpassword == false)){
                     //senha incorreta
@@ -108,9 +110,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(cadastroIntent);
             }
         });
-
-        //mudança teste1
-        //mudança teste2
 
 
     }
