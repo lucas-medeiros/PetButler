@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_cadastro"
-        android:autofillHints="" />
+        android:autofillHints="" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/et_sobrenome"
@@ -39,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nome" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        android:autofillHints="" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/et_CPF"
@@ -64,7 +65,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_CPF" />
+        app:layout_constraintTop_toBottomOf="@+id/et_CPF"
+        android:autofillHints="" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/et_usuario"
@@ -115,7 +117,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_sobrenome" />
+        app:layout_constraintTop_toBottomOf="@+id/et_sobrenome"
+        android:autofillHints="" tools:targetApi="o"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"

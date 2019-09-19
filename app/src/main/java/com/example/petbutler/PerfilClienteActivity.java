@@ -1,5 +1,6 @@
 package com.example.petbutler;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -71,6 +72,8 @@ public class PerfilClienteActivity extends AppCompatActivity {
         imageButton_editarPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent editarPerfilIntent = new Intent(PerfilClienteActivity.this, EditarPerfilCliente.class);
+                startActivity(editarPerfilIntent);
 
             }
         });

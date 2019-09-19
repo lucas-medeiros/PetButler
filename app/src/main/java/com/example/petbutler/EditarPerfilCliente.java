@@ -1,5 +1,6 @@
 package com.example.petbutler;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,11 +44,13 @@ public class EditarPerfilCliente extends AppCompatActivity {
 
                     } else {
 
+                        //pegar as info nova e salvar no BD
+
                         final Toast toastEditado = Toast.makeText(getApplicationContext(), "Edições salvas com sucesso", Toast.LENGTH_SHORT);
                         toastEditado.show();
 
-                        //pegar as info nova e salvar no BD
-
+                        Intent perfilIntent = new Intent(EditarPerfilCliente.this, PerfilClienteActivity.class);
+                        startActivity(perfilIntent);
                     }
                 } else {
 

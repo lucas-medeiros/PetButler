@@ -12,7 +12,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="64dp"
         android:ems="10"
-        android:hint="Nome "
+        android:hint="@string/nome"
         android:inputType="textPersonName"
         android:textColorHighlight="@color/colorAccent"
         android:textColorLink="@color/colorAccent"
@@ -21,7 +21,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" tools:targetApi="o"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -31,13 +32,14 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="Senha"
+        android:hint="@string/senha"
         android:inputType="textPassword"
         android:textColorHighlight="@color/colorAccent"
         android:textColorLink="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsername"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/bLogin"
@@ -46,7 +48,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="8dp"
-        android:text="Login"
+        android:text="@string/button_login"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -98,7 +100,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Cadastro"
+        android:text="@string/button_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bLogin" />

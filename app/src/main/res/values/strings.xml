@@ -22,4 +22,13 @@
     <string name="butler">Butler</string>
     <string name="editarPerfilTitler">Editar Perfil</string>
     <string name="fotoPerfil">Foto de perfil</string>
+    <string name="login">Login</string>
+    <string name="button_login">LOGIN</string>
+    <string name="button_cadastro">CADASTRO</string>
+    <string name="perfilTitle">Perfil</string>
+    <string name="editarPerfilButtonDescription">Redireciona para tela de editar perfil</string>
+    <string name="addPetbuttonDescription">Botão para adicionar novo pet</string>
+    <string name="pets">Pets</string>
+    <string name="notaCliente">Nota cliente</string>
+
 </resources>
