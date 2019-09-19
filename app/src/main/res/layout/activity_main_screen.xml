@@ -6,89 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".MainScreenActivity">
 
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="203dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        android:layout_marginBottom="110dp"
-        android:text="@string/mainMenuTitle"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonWalking"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/buttonWalking"
-        android:layout_width="121dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="67dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
         android:text="@string/passeiosTitle"
-        app:layout_constraintBottom_toTopOf="@+id/buttonProducts"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonHotel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <Button
         android:id="@+id/buttonHotel"
-        android:layout_width="121dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="@string/hotelTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonWalking"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <Button
         android:id="@+id/buttonProducts"
-        android:layout_width="121dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginRight="73dp"
-        android:layout_marginBottom="50dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="64dp"
         android:text="@string/entregasTitle"
-        app:layout_constraintBottom_toTopOf="@+id/imageEmergency"
         app:layout_constraintEnd_toStartOf="@+id/buttonTransport"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWalking" />
 
     <Button
         android:id="@+id/buttonTransport"
-        android:layout_width="121dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="50dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="@string/transportesTitle"
-        app:layout_constraintBottom_toTopOf="@+id/imageEmergency"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonHotel" />
 
     <ImageButton
         android:id="@+id/imageEmergency"
-        android:layout_width="121dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginRight="145dp"
-        android:layout_marginBottom="146dp"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="120dp"
         android:contentDescription="@string/descriptionEmergency"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_notification_overlay" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/mainMenuTitle"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
