@@ -14,6 +14,9 @@
         <activity android:name=".SearchHotelActivity" />
         <activity android:name=".SearchWalkerActivity" />
         <activity android:name=".MainScreenActivity" />
+        <activity android:name=".PerfilClienteActivity">
+        <activity android:name=".CadastroActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
