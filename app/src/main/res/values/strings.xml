@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Pet Butler</string>
     <string name="mainMenuTitle">Escolha de Serviço</string>
-    <string name="descriptionEmergency">Botão para emergencias</string>
+    <string name="descriptionEmergency">Botão para emergências</string>
     <string name="passeiosTitle">Passeios</string>
     <string name="hotelTitle">Hotel</string>
     <string name="entregasTitle">Entregas</string>
