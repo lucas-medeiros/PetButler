@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditarPerfilCliente"></activity>
+        <activity android:name=".EditarPerfilButler"></activity>
+        <activity android:name=".PerfilButlerActivity" />
+        <activity android:name=".EditarPerfilCliente" />
         <activity android:name=".SearchTransportActivity" />
         <activity android:name=".SearchProductActivity" />
         <activity android:name=".SearchHotelActivity" />
