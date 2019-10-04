@@ -22,8 +22,8 @@
         android:id="@+id/imageButton_editarPerfilButler"
         android:layout_width="60dp"
         android:layout_height="51dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/editarPerfilButtonDescription"
         app:layout_constraintStart_toEndOf="@+id/tv_perfilButler"
@@ -34,8 +34,8 @@
         android:id="@+id/imageView_fotoPerfilButler"
         android:layout_width="103dp"
         android:layout_height="91dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:contentDescription="@string/fotoPerfil"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +51,7 @@
         android:text="@string/notaButler"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.717"
         app:layout_constraintStart_toEndOf="@+id/imageButton_editarPerfilButler"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +66,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toEndOf="@+id/imageView_fotoPerfilButler"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton_editarPerfilButler" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_editarPerfilButler"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_sobrenomeButler"
@@ -80,7 +82,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_fotoPerfilButler" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fotoPerfilButler"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_usuarioButler"
@@ -95,7 +98,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_sobrenomeButler" />
+        app:layout_constraintTop_toBottomOf="@+id/et_sobrenomeButler"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_crmv"
@@ -110,7 +114,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_usuarioButler" />
+        app:layout_constraintTop_toBottomOf="@+id/et_usuarioButler"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_telefoneButler"
@@ -125,7 +130,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_crmv" />
+        app:layout_constraintTop_toBottomOf="@+id/et_crmv"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_emailButler"
@@ -140,7 +146,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_telefoneButler" />
+        app:layout_constraintTop_toBottomOf="@+id/et_telefoneButler"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_resumoButler"
@@ -156,7 +163,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_emailButler" />
+        app:layout_constraintTop_toBottomOf="@+id/et_emailButler"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/tv_servico"
@@ -164,7 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:text="@string/servicos"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
@@ -184,7 +192,7 @@
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_servico"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

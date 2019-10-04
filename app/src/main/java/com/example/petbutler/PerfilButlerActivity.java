@@ -29,10 +29,12 @@ public class PerfilButlerActivity extends AppCompatActivity {
         final EditText etTelefone = findViewById(R.id.et_telefoneButler);
         final EditText etResumo = findViewById(R.id.et_resumoButler);
         final EditText etCRMV = findViewById(R.id.et_crmv);
+        final TextView tv_notaButler = findViewById(R.id.tv_notaButler);
         final ListView ServicoList = findViewById(R.id.listView_servicolist);
 
+
         final ArrayList<String> a1serv = new ArrayList<>();
-        String serv1 = "Hotel Passaros Felizes", serv2 = "Clinica Pet Saudável", serv3 = "Petshop Nekomamushi";
+        String serv1 = "Hotel Pássaros Felizes", serv2 = "Clínica Pet Saudável", serv3 = "Petshop Nekomamushi";
         a1serv.add(serv1);
         a1serv.add(serv2);
         a1serv.add(serv3);
@@ -63,6 +65,8 @@ public class PerfilButlerActivity extends AppCompatActivity {
 
         etResumo.setClickable(false);
         etResumo.setEnabled(false);
+
+        tv_notaButler.setText("4.97"); //exemplo, pegar nota no BD
 
         imageButton_editarPerfilButler.setOnClickListener(new View.OnClickListener() {
             @Override
