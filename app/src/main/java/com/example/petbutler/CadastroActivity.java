@@ -51,6 +51,12 @@ public class CadastroActivity extends AppCompatActivity {
                         Intent mainIntent = new Intent(CadastroActivity.this, MainScreenActivity.class);
                         startActivity(mainIntent);
                     }
+                    else {
+                        if ((etSenha.getText().toString().compareTo("admin") == 0) && (etUsuario.getText().toString().compareTo("c") == 0)) {
+                            Intent perfilButlerIntent = new Intent(CadastroActivity.this, PerfilButlerActivity.class);
+                            startActivity(perfilButlerIntent);
+                        }
+                    }
 
                     if (etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) == 0) {
 

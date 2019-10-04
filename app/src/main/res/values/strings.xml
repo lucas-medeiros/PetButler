@@ -29,6 +29,9 @@
     <string name="editarPerfilButtonDescription">Redireciona para tela de editar perfil</string>
     <string name="addPetbuttonDescription">Botão para adicionar novo pet</string>
     <string name="pets">Pets</string>
-    <string name="notaCliente">Nota cliente</string>
+    <string name="notaCliente" translatable="false">Nota cliente</string>
+    <string name="notaButler">Nota Butler</string>
+    <string name="crmv">CRMV</string>
+    <string name="servicos">Serviços Prestados</string>
 
 </resources>
