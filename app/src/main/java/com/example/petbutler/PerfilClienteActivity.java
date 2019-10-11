@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class PerfilClienteActivity extends AppCompatActivity {
 
     //transformar em fragment
+    //como passar de um fragment para uma activity -> intent
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
