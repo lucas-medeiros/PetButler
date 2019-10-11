@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class PerfilClienteActivity extends AppCompatActivity {
 
+    //transformar em fragment
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
