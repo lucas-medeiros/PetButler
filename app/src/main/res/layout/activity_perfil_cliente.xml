@@ -14,12 +14,12 @@
         android:layout_marginLeft="12dp"
         android:ems="10"
         android:hint="@string/usuario"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_sobrenome"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/et_sobrenome" />
 
     <TextView
         android:id="@+id/textView"
