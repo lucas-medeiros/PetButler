@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilClienteActivity">
+
+    <EditText
+        android:id="@+id/et_usuario"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_sobrenome" />
+
+    <ImageView
+        android:id="@+id/imageView_fotoPerfil"
+        android:layout_width="103dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/fotoPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_person_icon_foreground"
+        tools:srcCompat="@mipmap/ic_person_icon_foreground" />
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:clickable="false"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fotoPerfil"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/et_sobrenome"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/sobrenome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_usuario"
+        android:autofillHints="" tools:targetApi="o"/>
+
+    <EditText
+        android:id="@+id/et_telefone"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/telefone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        android:autofillHints="" tools:targetApi="o"/>
+
+    <EditText
+        android:id="@+id/et_resumo"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/resumo"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_telefone"
+        android:importantForAutofill="no" />
+
+    <ListView
+        android:id="@+id/listView_petlist"
+        android:layout_width="323dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:cacheColorHint="@color/design_default_color_primary_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pets"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <ImageButton
+        android:id="@+id/imageButton_editarPerfil"
+        android:layout_width="60dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/editarPerfilButtonDescription"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fotoPerfil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <TextView
+        android:id="@+id/tv_nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/notaCliente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_editarPerfil"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/pets"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_resumo" />
+
+    <ImageButton
+        android:id="@+id/imageButton_addPet"
+        android:layout_width="49dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/addPetbuttonDescription"
+        app:layout_constraintStart_toEndOf="@+id/tv_pets"
+        app:layout_constraintTop_toBottomOf="@+id/et_resumo"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

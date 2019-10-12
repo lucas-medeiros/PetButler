@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MenuLateralActivity"
+            android:name=".ui.MenuLateral.MenuLateralActivity"
             android:label="@string/title_activity_menu_lateral"
             android:parentActivityName=".ui.Login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -18,9 +18,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petbutler.ui.Login.LoginActivity" />
         </activity>
-        <activity android:name=".ui.EditarPerfil.EditarPerfilButler" />
+        <activity android:name=".ui.EditarPerfil.EditarPerfilButlerActivity" />
         <activity android:name=".PerfilButlerActivity" />
-        <activity android:name=".ui.EditarPerfil.EditarPerfilCliente" />
+        <activity android:name=".ui.EditarPerfil.EditarPerfilClienteActivity" />
         <activity android:name=".ui.ProcuraServico.SearchTransportActivity" />
         <activity android:name=".ui.ProcuraServico.SearchProductActivity" />
         <activity android:name=".ui.ProcuraServico.SearchHotelActivity" />

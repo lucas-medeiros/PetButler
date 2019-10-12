@@ -12,12 +12,14 @@ import android.widget.Toast;
 import com.example.petbutler.PerfilButlerActivity;
 import com.example.petbutler.R;
 
-public class EditarPerfilButler extends AppCompatActivity {
+public class EditarPerfilButlerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_perfil_butler);
+
+        getSupportActionBar().setTitle("Editar Perfil");
 
         final ImageButton imageButton_fotoPerfilEP = findViewById(R.id.imageButton_fotoPerfilEPB);
         final Button bConfimar = findViewById(R.id.button_confirmarEPB);
@@ -49,7 +51,7 @@ public class EditarPerfilButler extends AppCompatActivity {
                         final Toast toastEditado = Toast.makeText(getApplicationContext(), "Edições salvas com sucesso", Toast.LENGTH_SHORT);
                         toastEditado.show();
 
-                        Intent perfilIntent = new Intent(EditarPerfilButler.this, PerfilButlerActivity.class);
+                        Intent perfilIntent = new Intent(EditarPerfilButlerActivity.this, PerfilButlerActivity.class);
                         startActivity(perfilIntent);
                     }
                 } else {

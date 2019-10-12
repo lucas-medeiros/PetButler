@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.petbutler.ui.EditarPerfil.EditarPerfilButler;
+import com.example.petbutler.ui.EditarPerfil.EditarPerfilButlerActivity;
 
 import java.util.ArrayList;
 
@@ -73,7 +73,7 @@ public class PerfilButlerActivity extends AppCompatActivity {
         imageButton_editarPerfilButler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent editarPerfilBIntent = new Intent(PerfilButlerActivity.this, EditarPerfilButler.class);
+                Intent editarPerfilBIntent = new Intent(PerfilButlerActivity.this, EditarPerfilButlerActivity.class);
                 startActivity(editarPerfilBIntent);
             }
         });

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.EditarPerfil.EditarPerfilButler">
+    tools:context=".ui.EditarPerfil.EditarPerfilButlerActivity">
 
     <TextView
         android:id="@+id/tv_editarPerfilB"

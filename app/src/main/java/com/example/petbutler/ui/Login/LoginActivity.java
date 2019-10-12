@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.petbutler.MenuLateralActivity;
+import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Cadastro.CadastroActivity;
 
