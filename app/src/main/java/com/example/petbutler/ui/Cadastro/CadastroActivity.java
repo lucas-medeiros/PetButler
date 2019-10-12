@@ -13,8 +13,9 @@ import android.widget.Toast;
 
 import com.example.petbutler.MainScreenActivity;
 import com.example.petbutler.PerfilButlerActivity;
-import com.example.petbutler.PerfilClienteActivity;
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Login.LoginActivity;
+import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -47,20 +48,13 @@ public class CadastroActivity extends AppCompatActivity {
 
                 //apenas para testes:
                 if((etSenha.getText().toString().compareTo("admin") == 0) && (etUsuario.getText().toString().compareTo("a") == 0)){
-                    Intent perfilClienteIntent = new Intent(CadastroActivity.this, PerfilClienteActivity.class);
-                    startActivity(perfilClienteIntent);
-                }
-                else if((etSenha.getText().toString().compareTo("admin") == 0) && (etUsuario.getText().toString().compareTo("b") == 0)) {
-                    Intent mainIntent = new Intent(CadastroActivity.this, MainScreenActivity.class);
+                    Intent mainIntent = new Intent(CadastroActivity.this, MenuLateralActivity.class);
                     startActivity(mainIntent);
                 }
-                else if ((etSenha.getText().toString().compareTo("admin") == 0) && (etUsuario.getText().toString().compareTo("p") == 0)) {
-                     Intent perfilButlerIntent = new Intent(CadastroActivity.this, PerfilButlerActivity.class);
-                     startActivity(perfilButlerIntent);
-                }
+
 
                 //fim dos testes - verificação para validar perfil:
-                else if (etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) != 0) {
+                if (etSenha.getText().toString().compareTo(etConfirmaSenha.getText().toString()) != 0) {
                     final Toast toastSenhaDiferente = Toast.makeText(getApplicationContext(), "Campo de confirmar senha diferente da senha original", Toast.LENGTH_SHORT);
                     toastSenhaDiferente.show();
                 }
@@ -82,13 +76,9 @@ public class CadastroActivity extends AppCompatActivity {
 
                     //SALVAR NO BD
 
-                    //Intent perfilClienteIntent = new Intent(CadastroActivity.this, PerfilClienteActivity.class);
-                    //startActivity(perfilClienteIntent);
 
-                    Intent menuIntent = new Intent(CadastroActivity.this, MainScreenActivity.class);
-                    startActivity(menuIntent);
-
-                    //intent teste, apagar dps
+                    Intent mainIntent = new Intent(CadastroActivity.this, MenuLateralActivity.class);
+                    startActivity(mainIntent);
                 }
             }
         });

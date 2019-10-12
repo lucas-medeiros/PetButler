@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.petbutler.PerfilClienteActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.EditarPerfil.EditarPerfilClienteActivity;
 

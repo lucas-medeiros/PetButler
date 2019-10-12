@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.petbutler.PerfilButlerActivity;
 import com.example.petbutler.R;
+import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 
 public class EditarPerfilButlerActivity extends AppCompatActivity {
 
@@ -51,7 +52,7 @@ public class EditarPerfilButlerActivity extends AppCompatActivity {
                         final Toast toastEditado = Toast.makeText(getApplicationContext(), "Edições salvas com sucesso", Toast.LENGTH_SHORT);
                         toastEditado.show();
 
-                        Intent perfilIntent = new Intent(EditarPerfilButlerActivity.this, PerfilButlerActivity.class);
+                        Intent perfilIntent = new Intent(EditarPerfilButlerActivity.this, MenuLateralActivity.class);
                         startActivity(perfilIntent);
                     }
                 } else {
