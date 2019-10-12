@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_log_pedidos" />
 
     <fragment
+        android:id="@+id/nav_emergencia"
+        android:name="com.example.petbutler.ui.Emergencia.EmergenciaFragment"
+        android:label="@string/emergencia"
+        tools:layout="@layout/fragment_emergencia" />
+
+    <fragment
         android:id="@+id/nav_tools"
         android:name="com.example.petbutler.ui.tools.ToolsFragment"
         android:label="@string/action_settings"
