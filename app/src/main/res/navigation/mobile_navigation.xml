@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_tools"
         android:name="com.example.petbutler.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:label="@string/action_settings"
         tools:layout="@layout/fragment_tools" />
 
 </navigation>
