@@ -1,4 +1,4 @@
-package com.example.petbutler.ui.home;
+package com.example.petbutler.ui.Home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
