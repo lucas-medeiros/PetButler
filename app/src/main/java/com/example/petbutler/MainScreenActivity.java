@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.petbutler.ui.ProcuraServico.SearchHotelActivity;
+import com.example.petbutler.ui.ProcuraServico.SearchProductActivity;
+import com.example.petbutler.ui.ProcuraServico.SearchTransportActivity;
+import com.example.petbutler.ui.ProcuraServico.SearchWalkerActivity;
+
 public class MainScreenActivity extends AppCompatActivity {
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.petbutler;
+package com.example.petbutler.ui.EditarPerfil;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.petbutler.PerfilClienteActivity;
+import com.example.petbutler.R;
 
 public class EditarPerfilCliente extends AppCompatActivity {
 

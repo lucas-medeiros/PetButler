@@ -1,7 +1,9 @@
-package com.example.petbutler;
+package com.example.petbutler.ui.ProcuraServico;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.petbutler.R;
 
 public class SearchTransportActivity extends AppCompatActivity {
 

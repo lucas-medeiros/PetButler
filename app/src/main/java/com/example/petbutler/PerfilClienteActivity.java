@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.petbutler.ui.EditarPerfil.EditarPerfilCliente;
+
 import java.util.ArrayList;
 
 public class PerfilClienteActivity extends AppCompatActivity {

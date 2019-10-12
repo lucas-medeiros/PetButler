@@ -1,4 +1,4 @@
-package com.example.petbutler;
+package com.example.petbutler.ui.Cadastro;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.petbutler.MainScreenActivity;
+import com.example.petbutler.PerfilButlerActivity;
+import com.example.petbutler.PerfilClienteActivity;
+import com.example.petbutler.R;
 
 public class CadastroActivity extends AppCompatActivity {
 

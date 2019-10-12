@@ -1,4 +1,4 @@
-package com.example.petbutler;
+package com.example.petbutler.ui.Login;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,14 +10,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.petbutler.MenuLateralActivity;
+import com.example.petbutler.R;
+import com.example.petbutler.ui.Cadastro.CadastroActivity;
+
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 if(foundusername && foundpassword){
                     //login
                     toastLoginSuccess.show();
-                    Intent mainIntent = new Intent(MainActivity.this, MainScreenActivity.class);
+                    Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
                     startActivity(mainIntent);
 
                 }else if(foundusername && (foundpassword == false)){
@@ -106,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 final Toast toastCadastro = Toast.makeText(context, "Cadastro", duration);
                 toastCadastro.show();
 
-                Intent cadastroIntent = new Intent(MainActivity.this, CadastroActivity.class);
+                Intent cadastroIntent = new Intent(LoginActivity.this, CadastroActivity.class);
                 startActivity(cadastroIntent);
             }
         });
