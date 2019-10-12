@@ -11,10 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.petbutler.MainScreenActivity;
-import com.example.petbutler.PerfilButlerActivity;
 import com.example.petbutler.R;
-import com.example.petbutler.ui.Login.LoginActivity;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 
 public class CadastroActivity extends AppCompatActivity {

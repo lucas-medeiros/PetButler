@@ -29,12 +29,13 @@ public class HomeFragment extends Fragment {
         final ImageButton imageEmergency = root.findViewById(R.id.imageEmergency);
 
 
+        // colocar os intents pros fragments de serviço
+
         //Finding walker
         buttonWalking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent walking = new Intent(MainScreenActivity.this, SearchWalkerActivity.class);
-                //MainScreenActivity.this.startActivity(walking);
+
 
             }
         });
@@ -42,8 +43,7 @@ public class HomeFragment extends Fragment {
         buttonHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent hotel = new Intent(MainScreenActivity.this, SearchHotelActivity.class);
-                //MainScreenActivity.this.startActivity(hotel);
+
 
             }
         });
@@ -51,8 +51,7 @@ public class HomeFragment extends Fragment {
         buttonProducts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent products = new Intent(MainScreenActivity.this, SearchProductActivity.class);
-                //MainScreenActivity.this.startActivity(products);
+
 
             }
         });
@@ -60,8 +59,7 @@ public class HomeFragment extends Fragment {
         buttonTransport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent transport = new Intent(MainScreenActivity.this, SearchTransportActivity.class);
-                //MainScreenActivity.this.startActivity(transport);
+
 
             }
         });

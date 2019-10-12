@@ -4,29 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilButlerActivity">
-
-    <TextView
-        android:id="@+id/tv_perfilButler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/perfilTitle"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".ui.Perfil.PerfilButlerFragment">
 
     <ImageButton
         android:id="@+id/imageButton_editarPerfilButler"
-        android:layout_width="60dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
         android:contentDescription="@string/editarPerfilButtonDescription"
-        app:layout_constraintStart_toEndOf="@+id/tv_perfilButler"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fotoPerfilButler"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
@@ -34,12 +22,12 @@
         android:id="@+id/imageView_fotoPerfilButler"
         android:layout_width="103dp"
         android:layout_height="91dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/fotoPerfil"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_perfilButler"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_person_icon_foreground"
         tools:srcCompat="@mipmap/ic_person_icon_foreground" />
 
@@ -47,27 +35,26 @@
         android:id="@+id/tv_notaButler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:text="@string/notaButler"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toEndOf="@+id/imageButton_editarPerfilButler"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_nomeButler"
-        android:layout_width="wrap_content"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toEndOf="@+id/imageView_fotoPerfilButler"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton_editarPerfilButler"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fotoPerfilButler" />
 
     <EditText
         android:id="@+id/et_sobrenomeButler"
@@ -75,15 +62,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/sobrenome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_fotoPerfilButler"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nomeButler" />
 
     <EditText
         android:id="@+id/et_usuarioButler"
@@ -107,15 +93,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="@string/crmv"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_usuarioButler"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/et_usuarioButler" />
 
     <EditText
         android:id="@+id/et_telefoneButler"
@@ -123,15 +108,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/telefone"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_crmv"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/et_crmv" />
 
     <EditText
         android:id="@+id/et_emailButler"
@@ -139,15 +123,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_telefoneButler"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/et_telefoneButler" />
 
     <EditText
         android:id="@+id/et_resumoButler"
@@ -155,16 +138,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/resumo"
+        android:importantForAutofill="no"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_emailButler"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/et_emailButler" />
 
     <TextView
         android:id="@+id/tv_servico"
@@ -182,8 +164,8 @@
 
     <ListView
         android:id="@+id/listView_servicolist"
-        android:layout_width="323dp"
-        android:layout_height="110dp"
+        android:layout_width="330dp"
+        android:layout_height="122dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:cacheColorHint="@color/design_default_color_primary_dark"

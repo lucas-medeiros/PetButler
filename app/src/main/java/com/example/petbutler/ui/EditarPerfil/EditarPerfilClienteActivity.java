@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.petbutler.MainScreenActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 
