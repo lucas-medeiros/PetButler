@@ -23,7 +23,7 @@
         <item
             android:id="@+id/nav_logPedidos"
             android:icon="@android:drawable/ic_menu_today"
-            android:title="Histórico de pedidos" />
+            android:title="@string/logPedidos" />
         <item
             android:id="@+id/nav_emergencia"
             android:icon="@android:drawable/ic_dialog_alert"

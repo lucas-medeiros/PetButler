@@ -18,9 +18,17 @@
         tools:layout="@layout/fragment_perfil_cliente" />
 
     <fragment
+        android:id="@+id/nav_logPedidos"
+        android:name="com.example.petbutler.ui.LogPedidos.LogPedidosFragment"
+        android:label="@string/logPedidos"
+        tools:layout="@layout/fragment_log_pedidos" />
+
+    <fragment
         android:id="@+id/nav_tools"
         android:name="com.example.petbutler.ui.tools.ToolsFragment"
         android:label="@string/action_settings"
         tools:layout="@layout/fragment_tools" />
+
+
 
 </navigation>
