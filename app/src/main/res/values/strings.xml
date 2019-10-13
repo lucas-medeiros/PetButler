@@ -55,6 +55,7 @@
     <string name="inputEndereco">Insira o endereço</string>
     <string name="buttonEnviarEmergencia">Enviar emergência</string>
     <string name="title_activity_entrega">EntregaActivity</string>
+    <string name="title_activity_transporte">Transporte</string>
 
 
 </resources>

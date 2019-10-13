@@ -17,6 +17,7 @@ import com.example.petbutler.ui.Emergencia.EmergenciaFragment;
 import com.example.petbutler.ui.ProcuraServico.EntregaActivity;
 import com.example.petbutler.ui.ProcuraServico.HotelActivity;
 import com.example.petbutler.ui.ProcuraServico.PasseadorActivity;
+import com.example.petbutler.ui.ProcuraServico.TransporteActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -68,7 +69,8 @@ public class HomeFragment extends Fragment {
         buttonTransport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent transporteIntent = new Intent(getActivity(), TransporteActivity.class);
+                startActivity(transporteIntent);
 
             }
         });
