@@ -21,6 +21,7 @@ public class TransporteActivity extends FragmentActivity implements OnMapReadyCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transporte);
 
+        //ENTRAR NO LINK DO ARQUIVO google_maps_api.xml PARA PEGAR KEY
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
