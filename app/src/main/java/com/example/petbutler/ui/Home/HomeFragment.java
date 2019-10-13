@@ -9,8 +9,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Emergencia.EmergenciaFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -67,7 +69,9 @@ public class HomeFragment extends Fragment {
         imageEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Implement emergency actions
+                EmergenciaFragment emergenciaFragment = new EmergenciaFragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment, emergenciaFragment, emergenciaFragment.getTag()).commit();
 
             }
         });

@@ -6,6 +6,7 @@ import com.example.petbutler.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Toast;
 
 public class MenuLateralActivity extends AppCompatActivity {
 
@@ -36,7 +38,7 @@ public class MenuLateralActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             }
         });
@@ -66,4 +68,14 @@ public class MenuLateralActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+/*
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.action_settings){
+            Toast.makeText(getApplicationContext(), "Clicou em configurações", Toast.LENGTH_SHORT).show();
+        } else if(id == R.id.action_help){
+            Toast.makeText(getApplicationContext(), "Clicou em ajuda", Toast.LENGTH_SHORT).show();
+        }
+        return true;
+    }*/
 }

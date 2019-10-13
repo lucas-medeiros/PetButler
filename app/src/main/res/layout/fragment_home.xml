@@ -58,7 +58,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonTransport"
         app:srcCompat="@mipmap/ic_local_hospital_round"
-        tools:srcCompat="@mipmap/ic_local_hospital" />
+        tools:srcCompat="@mipmap/ic_local_hospital"
+        android:background="@drawable/round_button"/>
 
     <TextView
         android:id="@+id/textViewTitle"

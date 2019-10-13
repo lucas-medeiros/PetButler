@@ -23,6 +23,9 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
+        getSupportActionBar().setTitle("Cadastro");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         final EditText etNome = findViewById(R.id.et_nome);
         final EditText etSobrenome = findViewById(R.id.et_sobrenome);
         final EditText etEmail = findViewById(R.id.et_email);
