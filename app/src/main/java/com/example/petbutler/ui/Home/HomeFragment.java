@@ -1,5 +1,6 @@
 package com.example.petbutler.ui.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,9 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Emergencia.EmergenciaFragment;
+import com.example.petbutler.ui.ProcuraServico.EntregaActivity;
+import com.example.petbutler.ui.ProcuraServico.HotelActivity;
+import com.example.petbutler.ui.ProcuraServico.PasseadorActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -37,7 +41,8 @@ public class HomeFragment extends Fragment {
         buttonWalking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent passeadorIntent = new Intent(getActivity(), PasseadorActivity.class);
+                startActivity(passeadorIntent);
 
             }
         });
@@ -45,7 +50,8 @@ public class HomeFragment extends Fragment {
         buttonHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent hotelIntent = new Intent(getActivity(), HotelActivity.class);
+                startActivity(hotelIntent);
 
             }
         });
@@ -53,7 +59,8 @@ public class HomeFragment extends Fragment {
         buttonProducts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent entregaIntent = new Intent(getActivity(), EntregaActivity.class);
+                startActivity(entregaIntent);
 
             }
         });

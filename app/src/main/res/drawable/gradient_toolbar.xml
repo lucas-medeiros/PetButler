@@ -6,7 +6,7 @@
     <gradient
         android:angle="360"
         android:type="linear"
-        android:startColor="@color/color1tollbar"
-        android:endColor="@color/color2tollbar"></gradient>
+        android:startColor="@color/colorPrimary"
+        android:endColor="@color/colorPrimaryDark"></gradient>
 
 </shape>

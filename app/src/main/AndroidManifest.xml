@@ -9,6 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.ProcuraServico.PasseadorActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
+
+        <activity android:name=".ui.ProcuraServico.HotelActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"/>
+
+        <activity
+            android:name=".ui.ProcuraServico.EntregaActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+
         <activity
             android:name=".ui.MenuLateral.MenuLateralActivity"
             android:label="@string/title_activity_menu_lateral"
@@ -17,17 +27,23 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petbutler.ui.Login.LoginActivity" />
+
         </activity>
-        <activity android:name=".ui.EditarPerfil.EditarPerfilButlerActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"/>
-        <activity android:name=".ui.EditarPerfil.EditarPerfilClienteActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"/>
-        <activity android:name=".ui.Cadastro.CadastroActivity"
-            android:parentActivityName=".ui.Login.LoginActivity"/>
+        <activity
+            android:name=".ui.EditarPerfil.EditarPerfilButlerActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+
+        <activity
+            android:name=".ui.EditarPerfil.EditarPerfilClienteActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+
+        <activity
+            android:name=".ui.Cadastro.CadastroActivity"
+            android:parentActivityName=".ui.Login.LoginActivity" />
+
         <activity android:name=".ui.Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
