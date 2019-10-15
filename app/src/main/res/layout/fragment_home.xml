@@ -14,7 +14,10 @@
         android:text="@string/passeiosTitle"
         app:layout_constraintEnd_toStartOf="@+id/buttonHotel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"/>
 
     <Button
         android:id="@+id/buttonHotel"
@@ -25,7 +28,10 @@
         android:layout_marginRight="32dp"
         android:text="@string/hotelTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"/>
 
     <Button
         android:id="@+id/buttonProducts"
@@ -35,7 +41,10 @@
         android:text="@string/entregasTitle"
         app:layout_constraintEnd_toStartOf="@+id/buttonTransport"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonWalking" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonWalking"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"/>
 
     <Button
         android:id="@+id/buttonTransport"
@@ -46,7 +55,10 @@
         android:layout_marginRight="32dp"
         android:text="@string/transportesTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHotel" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonHotel"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"/>
 
     <ImageButton
         android:id="@+id/imageEmergency"

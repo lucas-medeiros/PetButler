@@ -6,48 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".ui.EditarPerfil.EditarPerfilButlerActivity">
 
-    <TextView
-        android:id="@+id/tv_editarPerfilB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/editarPerfilTitler"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageButton
         android:id="@+id/imageButton_fotoPerfilEPB"
         android:layout_width="103dp"
         android:layout_height="102dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_editarPerfilB"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_person_icon_foreground" />
 
     <EditText
         android:id="@+id/et_nomeEPButler"
-        android:layout_width="wrap_content"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/nome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton_fotoPerfilEPB"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_fotoPerfilEPB" />
 
     <EditText
         android:id="@+id/et_sobrenomeEPB"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/sobrenome"
         android:inputType="textPersonName"
@@ -130,6 +116,9 @@
         android:text="@string/button_confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_resumoEPB" />
+        app:layout_constraintTop_toBottomOf="@+id/et_resumoEPB"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

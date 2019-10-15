@@ -31,10 +31,14 @@
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.petbutler.ui.tools.ToolsFragment"
+        android:name="com.example.petbutler.ui.Options.ToolsFragment"
         android:label="@string/action_settings"
         tools:layout="@layout/fragment_tools" />
 
-
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.petbutler.ui.Options.HelpFragment"
+        android:label="@string/help"
+        tools:layout="@layout/fragment_help" />
 
 </navigation>

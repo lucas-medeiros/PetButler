@@ -28,22 +28,18 @@
             android:id="@+id/nav_emergencia"
             android:icon="@android:drawable/ic_dialog_alert"
             android:title="@string/emergencia" />
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/action_settings" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/options">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
+                android:id="@+id/nav_tools"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/action_settings" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
+                android:id="@+id/nav_help"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:title="@string/help" />
         </menu>
     </item>
 

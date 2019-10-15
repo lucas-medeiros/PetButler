@@ -47,7 +47,7 @@ public class MenuLateralActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_tools, R.id.nav_perfil, R.id.nav_logPedidos, R.id.nav_emergencia)
+                R.id.nav_home, R.id.nav_tools, R.id.nav_perfil, R.id.nav_logPedidos, R.id.nav_emergencia, R.id.nav_help)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -68,14 +68,4 @@ public class MenuLateralActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-/*
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if(id == R.id.action_settings){
-            Toast.makeText(getApplicationContext(), "Clicou em configurações", Toast.LENGTH_SHORT).show();
-        } else if(id == R.id.action_help){
-            Toast.makeText(getApplicationContext(), "Clicou em ajuda", Toast.LENGTH_SHORT).show();
-        }
-        return true;
-    }*/
 }

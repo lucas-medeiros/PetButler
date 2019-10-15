@@ -15,7 +15,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"/>
 
     <EditText
         android:id="@+id/et_nome"
