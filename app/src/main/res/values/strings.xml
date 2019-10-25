@@ -57,7 +57,10 @@
     <string name="title_activity_entrega">EntregaActivity</string>
     <string name="title_activity_transporte">Transporte</string>
     <string name="options">Opções</string>
-
+    <string name="tipo">Tipo</string>
+    <string name="endereco">Endereço</string>
+    <string name="valor">Valor</string>
+    <string name="animal">Animal</string>
 
 
 </resources>

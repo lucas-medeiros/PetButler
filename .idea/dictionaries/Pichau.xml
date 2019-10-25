@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Pichau">
     <words>
+      <w>adicionar</w>
       <w>ajuda</w>
       <w>apenas</w>
       <w>branco</w>
@@ -10,11 +11,18 @@
       <w>cliente</w>
       <w>clínica</w>
       <w>colocar</w>
+      <w>consulta</w>
+      <w>consultar</w>
+      <w>conteúdo</w>
       <w>editar</w>
       <w>emergencia</w>
       <w>emergência</w>
+      <w>endereco</w>
+      <w>endereço</w>
       <w>entrega</w>
       <w>histórico</w>
+      <w>minutos</w>
+      <w>métodos</w>
       <w>nekomamushi</w>
       <w>nota</w>
       <w>nymeria</w>
@@ -35,6 +43,7 @@
       <w>servico</w>
       <w>serviço</w>
       <w>sobrenome</w>
+      <w>tipo</w>
       <w>todos</w>
       <w>transporte</w>
       <w>usuario</w>
