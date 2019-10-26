@@ -4,21 +4,27 @@ import com.example.petbutler.ui.Classes.Animal.Animal;
 import com.example.petbutler.ui.Classes.Pessoa.Butler;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public abstract class Servico {
 
-    private Calendar data;
-    private float notaCliente;
-    private float notaAnimal;
-    private float notaButler;
-    private Endereco endereco;
-    private String status;
-    private Cliente cliente;
-    private Butler butler;
-    private Animal animal;
+    protected int id;
+    protected Calendar data;
+    protected double notaCliente;
+    protected double notaAnimal;
+    protected double notaButler;
+    protected Endereco endereco;
+    protected String status;
+    protected Cliente cliente;
+    protected Butler butler;
+    protected Animal animal;
+    protected double preco;
 
-    public Servico(Calendar data, float notaCliente, float notaAnimal, float notaButler, Endereco endereco, String status, Cliente cliente, Butler butler, Animal animal) {
+    public Servico(int id, Calendar data, double notaCliente, double notaAnimal, double notaButler, Endereco endereco, String status,
+                   Cliente cliente, Butler butler, Animal animal) {
+        this.id = id;
         this.data = data;
         this.notaCliente = notaCliente;
         this.notaAnimal = notaAnimal;
@@ -30,6 +36,14 @@ public abstract class Servico {
         this.animal = animal;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Calendar getData() {
         return data;
     }
@@ -38,27 +52,27 @@ public abstract class Servico {
         this.data = data;
     }
 
-    public float getNotaCliente() {
+    public double getNotaCliente() {
         return notaCliente;
     }
 
-    public void setNotaCliente(float notaCliente) {
+    public void setNotaCliente(double notaCliente) {
         this.notaCliente = notaCliente;
     }
 
-    public float getNotaAnimal() {
+    public double getNotaAnimal() {
         return notaAnimal;
     }
 
-    public void setNotaAnimal(float notaAnimal) {
+    public void setNotaAnimal(double notaAnimal) {
         this.notaAnimal = notaAnimal;
     }
 
-    public float getNotaButler() {
+    public double getNotaButler() {
         return notaButler;
     }
 
-    public void setNotaButler(float notaButler) {
+    public void setNotaButler(double notaButler) {
         this.notaButler = notaButler;
     }
 
@@ -102,13 +116,26 @@ public abstract class Servico {
         this.animal = animal;
     }
 
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public String toString(){
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return "Butler: " + this.butler.getNome() + " \n" + dateFormat.format(this.data.getTime());
+    }
+
     //adicionar conteúdo dos métodos
     public void prestarServico(){
 
     }
 
     public void calculaValor(){
-
+        //this.preco = ...
     }
 
     public void avalia(){

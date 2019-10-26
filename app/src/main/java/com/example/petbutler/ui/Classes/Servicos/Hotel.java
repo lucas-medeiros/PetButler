@@ -10,9 +10,9 @@ public class Hotel extends Servico {
 
     private int estadia; //em dias
 
-    public Hotel(Calendar data, float notaCliente, float notaAnimal, float notaButler, Endereco endereco, String status, Cliente cliente,
+    public Hotel(int id, Calendar data, double notaCliente, double notaAnimal, double notaButler, Endereco endereco, String status, Cliente cliente,
                  Butler butler, Animal animal, int estadia) {
-        super(data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
+        super(id, data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
         this.estadia = estadia;
     }
 
@@ -34,5 +34,6 @@ public class Hotel extends Servico {
     public void prestarServico() {
         super.prestarServico(); //To change body of generated methods, choose Tools | Templates.
     }
+
 
 }

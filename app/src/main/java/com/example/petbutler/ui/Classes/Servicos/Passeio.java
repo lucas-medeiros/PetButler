@@ -10,9 +10,9 @@ public class Passeio extends Servico {
 
     private int tempo; //em minutos
 
-    public Passeio(Calendar data, float notaCliente, float notaAnimal, float notaButler, Endereco endereco, String status, Cliente cliente,
+    public Passeio(int id, Calendar data, double notaCliente, double notaAnimal, double notaButler, Endereco endereco, String status, Cliente cliente,
                    Butler butler, Animal animal, int tempo) {
-        super(data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
+        super(id, data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
         this.tempo = tempo;
     }
 
@@ -33,5 +33,6 @@ public class Passeio extends Servico {
     public void calculaValor() {
         super.calculaValor(); //To change body of generated methods, choose Tools | Templates.
     }
+
 
 }

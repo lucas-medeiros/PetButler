@@ -2,16 +2,16 @@ package com.example.petbutler.ui.Classes.Pessoa;
 
 public abstract class Pessoa {
 
-    private String nome;
-    private String login;
-    private String senha;
-    private String CPF;
-    private String resumo;
-    private float nota;
-    private Foto foto; //trocar tipo
-    private Telefone telefone;
+    protected String nome;
+    protected String login;
+    protected String senha;
+    protected String CPF;
+    protected String resumo;
+    protected double nota;
+    protected Foto foto; //trocar tipo
+    protected Telefone telefone;
 
-    public Pessoa(String nome, String login, String senha, String CPF, String resumo, float nota, Foto foto, Telefone telefone) {
+    public Pessoa(String nome, String login, String senha, String CPF, String resumo, double nota, Foto foto, Telefone telefone) {
         this.nome = nome;
         this.login = login;
         this.senha = senha;
@@ -70,11 +70,11 @@ public abstract class Pessoa {
         this.telefone = telefone;
     }
 
-    public float getNota() {
+    public double getNota() {
         return nota;
     }
 
-    public void setNota(float nota) {
+    public void setNota(double nota) {
         this.nota = nota;
     }
 

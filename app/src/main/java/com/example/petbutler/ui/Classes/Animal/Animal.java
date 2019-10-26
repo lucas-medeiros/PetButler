@@ -9,14 +9,14 @@ public class Animal {
     private String nome;
     private String resumo;
     private String tipo;
-    private float peso;
+    private double peso;
     private String tamanho;
     private String caracteristicas;
     private Calendar dataNascimento;
-    private float nota;
+    private double nota;
     private Foto foto;
 
-    public Animal(String nome, String resumo, String tipo, float peso, String tamanho, String caracteristicas, Calendar dataNascimento, Foto foto) {
+    public Animal(String nome, String resumo, String tipo, double peso, String tamanho, String caracteristicas, Calendar dataNascimento, Foto foto) {
         this.nome = nome;
         this.resumo = resumo;
         this.tipo = tipo;
@@ -51,11 +51,11 @@ public class Animal {
         this.tipo = tipo;
     }
 
-    public float getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(float peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
@@ -83,11 +83,11 @@ public class Animal {
         this.dataNascimento = dataNascimento;
     }
 
-    public float getNota() {
+    public double getNota() {
         return nota;
     }
 
-    public void setNota(float nota) {
+    public void setNota(double nota) {
         this.nota = nota;
     }
 

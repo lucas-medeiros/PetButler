@@ -4,7 +4,7 @@ public class Cliente extends Pessoa{
 
     private Cartao cartao;
 
-    public Cliente(String nome, String login, String senha, String CPF, String resumo, float nota, Foto foto, Telefone telefone) {
+    public Cliente(String nome, String login, String senha, String CPF, String resumo, double nota, Foto foto, Telefone telefone) {
         super(nome, login, senha, CPF, resumo, nota, foto, telefone);
     }
 

@@ -66,4 +66,13 @@ public class Endereco {
         this.pontoReferencia = pontoReferencia;
     }
 
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "CEP='" + CEP + '\'' +
+                ", numero=" + numero +
+                ", complemento='" + complemento + '\'' +
+                ", estado='" + estado + '\'' +
+                ", cidade='" + cidade + '\'' + '}';
+    }
 }

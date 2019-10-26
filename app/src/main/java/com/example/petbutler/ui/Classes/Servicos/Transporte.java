@@ -8,8 +8,9 @@ import java.util.Calendar;
 
 public class Transporte extends Servico {
 
-    public Transporte(Calendar data, float notaCliente, float notaAnimal, float notaButler, Endereco endereco, String status, Cliente cliente, Butler butler, Animal animal) {
-        super(data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
+    public Transporte(int id, Calendar data, double notaCliente, double notaAnimal, double notaButler, Endereco endereco, String status,
+                      Cliente cliente, Butler butler, Animal animal) {
+        super(id, data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
     }
 
     @Override
@@ -21,5 +22,6 @@ public class Transporte extends Servico {
     public void prestarServico() {
         super.prestarServico(); //To change body of generated methods, choose Tools | Templates.
     }
+
 
 }

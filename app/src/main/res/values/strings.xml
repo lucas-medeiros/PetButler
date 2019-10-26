@@ -61,6 +61,7 @@
     <string name="endereco">Endereço</string>
     <string name="valor">Valor</string>
     <string name="animal">Animal</string>
+    <string name="descricao">Descrição</string>
 
 
 </resources>
