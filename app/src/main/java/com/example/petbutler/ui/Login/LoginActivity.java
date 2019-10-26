@@ -23,18 +23,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText etUsername = (EditText) findViewById(R.id.etUsername);
-        final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final TextView tvRegisterLink = (TextView) findViewById(R.id.tvRegisterHere);
-        final Button bLogin = (Button) findViewById(R.id.bLogin);
-        final Button bCadastro = (Button) findViewById(R.id.bCadastro);
-        final TextView tvBDPass = (TextView) findViewById(R.id.tvBDPass);
-        final TextView tvBDName = (TextView) findViewById(R.id.tvBDName);
+        final EditText etUsername = findViewById(R.id.etUsername);
+        final EditText etPassword = findViewById(R.id.etPassword);
+        final TextView tvRegisterLink = findViewById(R.id.tvRegisterHere);
+        final Button bLogin = findViewById(R.id.bLogin);
+        final Button bCadastro = findViewById(R.id.bCadastro);
+        final TextView tvBDPass = findViewById(R.id.tvBDPass);
+        final TextView tvBDName = findViewById(R.id.tvBDName);
 
 
         String password1 = "admin", username1 = "admin", username2 = "lucas", password2 = "1234";
         String username3 = "professor", password3 = "professor", username4 = "adminprofessor", password4 = "adminprofessor";
-        String username5 = "luiz", username6 = "leandro", username7 = "rafael";
+        String username5 = "luiz", username6 = "leandro", username7 = "rafael", username8 = "jonsnow";
 
         final ArrayList<String> alUsername = new ArrayList<String>();
         final ArrayList<String> alPassword = new ArrayList<String>();
@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         alUsername.add(username5);
         alUsername.add(username6);
         alUsername.add(username7);
+        alUsername.add(username8);
 
 
         bLogin.setOnClickListener(new View.OnClickListener() {

@@ -6,16 +6,18 @@ public abstract class Pessoa {
     protected String login;
     protected String senha;
     protected String CPF;
+    protected String email;
     protected String resumo;
     protected double nota;
     protected Foto foto; //trocar tipo
     protected Telefone telefone;
 
-    public Pessoa(String nome, String login, String senha, String CPF, String resumo, double nota, Foto foto, Telefone telefone) {
+    public Pessoa(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
         this.nome = nome;
         this.login = login;
         this.senha = senha;
         this.CPF = CPF;
+        this.email = email;
         this.resumo = resumo;
         this.nota = nota;
         this.foto = foto;
@@ -52,6 +54,14 @@ public abstract class Pessoa {
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getResumo() {

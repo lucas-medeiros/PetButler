@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Pessoa.Butler;
+import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.EditarPerfil.EditarPerfilButlerActivity;
 
 import java.util.ArrayList;
@@ -41,13 +43,13 @@ public class PerfilButlerFragment extends Fragment {
 
         final ImageButton imageButton_editarPerfilButler = root.findViewById(R.id.imageButton_editarPerfilButler);
         final ImageView fotoPerfil = root.findViewById(R.id.imageView_fotoPerfilButler);
-        final EditText etNome = root.findViewById(R.id.et_nomeButler);
-        final EditText etSobrenome = root.findViewById(R.id.et_sobrenomeButler);
-        final EditText etEmail = root.findViewById(R.id.et_emailButler);
-        final EditText etUsuario = root.findViewById(R.id.et_usuarioButler);
-        final EditText etTelefone = root.findViewById(R.id.et_telefoneButler);
-        final EditText etResumo = root.findViewById(R.id.et_resumoButler);
-        final EditText etCRMV = root.findViewById(R.id.et_crmv);
+        final TextView tvNome = root.findViewById(R.id.et_nomeButler);
+        final TextView tvSobrenome = root.findViewById(R.id.et_sobrenomeButler);
+        final TextView tvEmail = root.findViewById(R.id.et_emailButler);
+        final TextView tvUsuario = root.findViewById(R.id.et_usuarioButler);
+        final TextView tvTelefone = root.findViewById(R.id.et_telefoneButler);
+        final TextView tvResumo = root.findViewById(R.id.et_resumoButler);
+        final TextView tvCRMV = root.findViewById(R.id.et_crmv);
         final TextView tv_notaButler = root.findViewById(R.id.tv_notaButler);
         final ListView ServicoList = root.findViewById(R.id.listView_servicolist);
 
@@ -61,31 +63,20 @@ public class PerfilButlerFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, a1serv);
         ServicoList.setAdapter(adapter);
 
-        //EditText SETUP:
-        etNome.setClickable(false);
-        etNome.setEnabled(false);
-        //etNome.setText(""); PEGAR DADOS DO BD?
-
-        etSobrenome.setClickable(false);
-        etSobrenome.setEnabled(false);
-
-        etCRMV.setClickable(false);
-        etCRMV.setEnabled(false);
-
-        etEmail.setClickable(false);
-        etEmail.setEnabled(false);
-
-
-        etUsuario.setClickable(false);
-        etUsuario.setEnabled(false);
-
-        etTelefone.setClickable(false);
-        etTelefone.setEnabled(false);
-
-        etResumo.setClickable(false);
-        etResumo.setEnabled(false);
-
         tv_notaButler.setText("4.97"); //exemplo, pegar nota no BD
+
+        //teste:
+        Butler jayme = new Butler("Jayme Lannister","JLannister","lovemysister","000000001", "ringslayer@lannister.com",
+                "Não tem a mão direita",3.7,null,new Telefone("041","987654321"));
+
+        tvNome.setText(jayme.getNome().substring(0,jayme.getNome().indexOf(" ")+1));
+        tvSobrenome.setText(jayme.getNome().substring(jayme.getNome().indexOf(" ")+1));
+        tvEmail.setText(jayme.getEmail());
+        tvUsuario.setText(jayme.getLogin());
+        tvTelefone.setText(jayme.getTelefone().toString());
+        tvResumo.setText(jayme.getResumo());
+        tvCRMV.setText(jayme.getCRMV());
+        //fotoPerfil... colocar foto de perfil
 
         imageButton_editarPerfilButler.setOnClickListener(new View.OnClickListener() {
             @Override

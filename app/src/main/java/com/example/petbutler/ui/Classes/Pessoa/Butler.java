@@ -6,8 +6,8 @@ public class Butler extends Pessoa{
     private String CNH;
     private Conta conta;
 
-    public Butler(String nome, String login, String senha, String CPF, String resumo, double nota, Foto foto, Telefone telefone) {
-        super(nome, login, senha, CPF, resumo, nota, foto, telefone);
+    public Butler(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
+        super(nome, login, senha, CPF, email, resumo, nota, foto, telefone);
     }
 
     public String getCRMV() {
