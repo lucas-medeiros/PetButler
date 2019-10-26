@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Classes.Animal.Animal;
@@ -26,31 +27,13 @@ public class ConsultaServicoActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Consultar Serviço");
 
-        final EditText etCliente = findViewById(R.id.et_ClienteNome);
-        final EditText etButler = findViewById(R.id.et_ButlerNome);
-        final EditText etAnimal = findViewById(R.id.et_AnimalNome);
-        final EditText etTipo = findViewById(R.id.et_Tipo);
-        final EditText etEndereco = findViewById(R.id.et_Endereco);
-        final EditText etValor = findViewById(R.id.et_Valor);
+        final TextView tvCliente = findViewById(R.id.et_ClienteNome);
+        final TextView tvButler = findViewById(R.id.et_ButlerNome);
+        final TextView tvAnimal = findViewById(R.id.et_AnimalNome);
+        final TextView tvTipo = findViewById(R.id.et_Tipo);
+        final TextView tvEndereco = findViewById(R.id.et_Endereco);
+        final TextView tvValor = findViewById(R.id.et_Valor);
 
-        //Bloqueia os Edit texts:
-        etCliente.setEnabled(false);
-        etCliente.setClickable(false);
-
-        etButler.setEnabled(false);
-        etButler.setClickable(false);
-
-        etAnimal.setEnabled(false);
-        etAnimal.setClickable(false);
-
-        etTipo.setEnabled(false);
-        etTipo.setClickable(false);
-
-        etEndereco.setEnabled(false);
-        etEndereco.setClickable(false);
-
-        etValor.setEnabled(false);
-        etValor.setClickable(false);
 
         Intent logPedidosIntent = getIntent();
         int ServicoID = (int) logPedidosIntent.getSerializableExtra("SERVICO_ID");
@@ -66,13 +49,13 @@ public class ConsultaServicoActivity extends AppCompatActivity {
             final Entrega servico = new Entrega(5,new GregorianCalendar(2019,9,25),4.7,4.7,4.7,end1,"concluído",
                     JonSnow,jayme,ghost,"Entrega","Entrega de osso comprado no PetShop","Osso");
 
-            etCliente.setText(servico.getCliente().getNome());
-            etButler.setText(servico.getButler().getNome());
-            etAnimal.setText(servico.getAnimal().getNome());
-            etTipo.setText(servico.getDescricao());
-            etEndereco.setText(servico.getEndereco().toString());
-            //etValor.setText("" + servico.getPreco());
-            etValor.setText("R$15,00"); //apenas exemplo
+            tvCliente.setText(servico.getCliente().getNome());
+            tvButler.setText(servico.getButler().getNome());
+            tvAnimal.setText(servico.getAnimal().getNome());
+            tvTipo.setText(servico.getDescricao());
+            tvEndereco.setText(servico.getEndereco().toString());
+            //tvValor.setText("" + servico.getPreco());
+            tvValor.setText("R$15,00"); //apenas exemplo
 
         }
 
