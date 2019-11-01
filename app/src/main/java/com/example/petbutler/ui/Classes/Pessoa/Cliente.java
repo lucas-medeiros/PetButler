@@ -7,6 +7,7 @@ public class Cliente extends Pessoa{
     public Cliente(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
         super(nome, login, senha, CPF, email, resumo, nota, foto, telefone);
         this.cartao = null;
+        this.cliente = true;
     }
 
     public Cartao getCartao() {

@@ -10,6 +10,7 @@ public abstract class Pessoa {
     protected String resumo;
     protected double nota;
     protected Foto foto; //trocar tipo
+    protected boolean cliente;
     protected Telefone telefone;
 
     public Pessoa(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
@@ -86,6 +87,14 @@ public abstract class Pessoa {
 
     public void setNota(double nota) {
         this.nota = nota;
+    }
+
+    public boolean isCliente() {
+        return cliente;
+    }
+
+    public void setCliente(boolean cliente) {
+        this.cliente = cliente;
     }
 
     //adicionar conteúdo dos métodos:

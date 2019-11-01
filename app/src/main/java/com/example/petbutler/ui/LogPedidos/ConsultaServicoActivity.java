@@ -10,6 +10,7 @@ import com.example.petbutler.R;
 import com.example.petbutler.ui.Classes.Animal.Animal;
 import com.example.petbutler.ui.Classes.Pessoa.Butler;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
+import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.Classes.Servicos.Endereco;
 import com.example.petbutler.ui.Classes.Servicos.Entrega;
 import com.example.petbutler.ui.Classes.Servicos.Servico;
@@ -44,11 +45,11 @@ public class ConsultaServicoActivity extends AppCompatActivity {
             GregorianCalendar data = new GregorianCalendar(1998,12,27);
             Animal ghost = new Animal("Ghost", "matador de white-walers", "Cachorro", 48.1, "grande",data,null);
             Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
-                    "Não sabe de nada",4.6,null,null);
-            Butler jayme = new Butler("Jaime Lannister","JLannister","lovemysister","000000001", "ringslayer@lannister.com",
-                    "Não tem a mão direita",3.7,null,null);
+                    "Lord Commander of the Night's Watch",4.6,null,new Telefone("041","123456789"));
+            Butler jaime = new Butler("Jaime Lannister","jaime","lovemysister","000000001", "ringslayer@lannister.com",
+                    "Kingslayer",3.7,null,new Telefone("041","987654321"));
             final Entrega servico = new Entrega(5,new GregorianCalendar(2019,9,25),4.7,4.7,4.7,end1,"concluído",
-                    JonSnow,jayme,ghost,"Entrega","Entrega de osso comprado no PetShop","Osso");
+                    JonSnow,jaime,ghost,"Entrega","Entrega de osso comprado no PetShop","Osso");
 
             tvCliente.setText(servico.getCliente().getNome());
             tvButler.setText(servico.getButler().getNome());

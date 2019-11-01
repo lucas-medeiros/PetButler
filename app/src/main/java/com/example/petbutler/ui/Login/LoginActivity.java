@@ -10,12 +10,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.petbutler.ui.Classes.Animal.Animal;
 import com.example.petbutler.ui.Classes.Global.Global;
+import com.example.petbutler.ui.Classes.Pessoa.Butler;
+import com.example.petbutler.ui.Classes.Pessoa.Cliente;
+import com.example.petbutler.ui.Classes.Pessoa.Pessoa;
+import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Cadastro.CadastroActivity;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -87,14 +93,30 @@ public class LoginActivity extends AppCompatActivity {
                 if(foundusername && foundpassword) {
 
                     //apenas para testes -> pegar do BD
+                    Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
+                            "Lord Commander of the Night's Watch",4.6,null,new Telefone("041","123456789"));
+                    Cliente lucas = new Cliente("Lucas Medeiros","lucas","1234","06376186963", "lucascarmed@gmail.com",
+                            "Eu gosto muito de churros!",5.0,null,new Telefone("041","998390804"));
+                    Butler Jaime = new Butler("Jaime Lannister","Jaime","lovemysister","000000001", "ringslayer@lannister.com",
+                            "Kingslayer",3.7,null,null);
+                    Pessoa usuario;
+
                     if(username.compareTo("jaime") == 0){ //butler
-                        Global.isCliente = false;
-                    } else { //cliente
-                        Global.isCliente = true;
+                        usuario = Jaime;
+                    } else if (username.compareTo("lucas") == 0){ //cliente
+                        usuario = lucas;
+                    } else {
+                        usuario = JonSnow;
                     }
+
+                    Global.isCliente = usuario.isCliente();
+                    Global.nome = usuario.getNome();
+                    Global.descricao = usuario.getResumo();
+
                     toastLoginSuccess.show();
                     Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
                     startActivity(mainIntent);
+
                 }else if(foundusername && !foundpassword){
                     //senha incorreta
                     toastLoginFailed2.show();

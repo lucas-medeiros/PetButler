@@ -3,6 +3,7 @@ package com.example.petbutler.ui.MenuLateral;
 import android.os.Bundle;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Global.Global;
 import com.example.petbutler.ui.Classes.Servicos.Servico;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -23,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MenuLateralActivity extends AppCompatActivity {
@@ -51,6 +53,13 @@ public class MenuLateralActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView headerUsername = headerView.findViewById(R.id.headerUsername);
+        TextView headerDescription = headerView.findViewById(R.id.headerDescription);
+        headerUsername.setText(Global.nome);
+        headerDescription.setText(Global.descricao);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
