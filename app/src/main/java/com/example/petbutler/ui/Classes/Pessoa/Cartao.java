@@ -2,12 +2,12 @@ package com.example.petbutler.ui.Classes.Pessoa;
 
 public class Cartao {
 
-    private int numero;
-    private int codSeguranca;
-    private int mesValidade; //para evitar usar a Classe Calendar
-    private int anoValidade;
-    private String nomeTitular;
-    private char tipo;
+    protected int numero;
+    protected int codSeguranca;
+    protected int mesValidade; //para evitar usar a Classe Calendar
+    protected int anoValidade;
+    protected String nomeTitular;
+    protected char tipo;
 
     public Cartao(int numero, int codSeguranca, int mesValidade, int anoValidade, String nomeTitular, char tipo) {
         this.numero = numero;

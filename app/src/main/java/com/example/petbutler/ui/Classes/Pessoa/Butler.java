@@ -2,9 +2,9 @@ package com.example.petbutler.ui.Classes.Pessoa;
 
 public class Butler extends Pessoa{
 
-    private String CRMV;
-    private String CNH;
-    private Conta conta;
+    protected String CRMV;
+    protected String CNH;
+    protected Conta conta;
 
     public Butler(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
         super(nome, login, senha, CPF, email, resumo, nota, foto, telefone);

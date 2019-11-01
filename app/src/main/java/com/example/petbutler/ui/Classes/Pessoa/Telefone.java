@@ -2,8 +2,8 @@ package com.example.petbutler.ui.Classes.Pessoa;
 
 public class Telefone {
 
-    private String DDD;
-    private String numero;
+    protected String DDD;
+    protected String numero;
 
     public Telefone(String DDD, String numero) {
         this.DDD = DDD;

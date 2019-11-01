@@ -3,6 +3,7 @@ package com.example.petbutler.ui.MenuLateral;
 import android.os.Bundle;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Servicos.Servico;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -38,8 +39,14 @@ public class MenuLateralActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                Servico serv = null; //se cliente tiver um serviço em andamento pegar no BD
+                if(serv == null){
+                    Snackbar.make(view, "Nenhum serviço em andamento", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null).show();
+                } else {
+                    //intent pra tela de chat
+                }
+
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

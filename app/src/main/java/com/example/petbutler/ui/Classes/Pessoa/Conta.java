@@ -2,10 +2,10 @@ package com.example.petbutler.ui.Classes.Pessoa;
 
 public class Conta {
 
-    private int numero;
-    private int agencia;
-    private int digitoNumero;
-    private int digitoAgencia;
+    protected int numero;
+    protected int agencia;
+    protected int digitoNumero;
+    protected int digitoAgencia;
 
     public Conta(int numero, int agencia, int digitoNumero, int digitoAgencia) {
         this.numero = numero;

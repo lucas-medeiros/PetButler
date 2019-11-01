@@ -6,23 +6,21 @@ import java.util.Calendar;
 
 public class Animal {
 
-    private String nome;
-    private String resumo;
-    private String tipo;
-    private double peso;
-    private String tamanho;
-    private String caracteristicas;
-    private Calendar dataNascimento;
-    private double nota;
-    private Foto foto;
+    protected String nome;
+    protected String resumo;
+    protected String tipo;
+    protected double peso;
+    protected String tamanho;
+    protected Calendar dataNascimento;
+    protected double nota;
+    protected Foto foto;
 
-    public Animal(String nome, String resumo, String tipo, double peso, String tamanho, String caracteristicas, Calendar dataNascimento, Foto foto) {
+    public Animal(String nome, String resumo, String tipo, double peso, String tamanho, Calendar dataNascimento, Foto foto) {
         this.nome = nome;
         this.resumo = resumo;
         this.tipo = tipo;
         this.peso = peso;
         this.tamanho = tamanho;
-        this.caracteristicas = caracteristicas;
         this.dataNascimento = dataNascimento;
         this.foto = foto;
     }
@@ -65,14 +63,6 @@ public class Animal {
 
     public void setTamanho(String tamanho) {
         this.tamanho = tamanho;
-    }
-
-    public String getCaracteristicas() {
-        return caracteristicas;
-    }
-
-    public void setCaracteristicas(String caracteristicas) {
-        this.caracteristicas = caracteristicas;
     }
 
     public Calendar getDataNascimento() {

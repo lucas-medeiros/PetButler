@@ -50,9 +50,6 @@
             android:label="@string/title_activity_menu_lateral"
             android:parentActivityName=".ui.Login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.petbutler.ui.Login.LoginActivity" />
         </activity>
         <activity
             android:name=".ui.EditarPerfil.EditarPerfilButlerActivity"

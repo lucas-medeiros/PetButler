@@ -68,11 +68,6 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endereco{" +
-                "CEP='" + CEP + '\'' +
-                ", numero=" + numero +
-                ", complemento='" + complemento + '\'' +
-                ", estado='" + estado + '\'' +
-                ", cidade='" + cidade + '\'' + '}';
+        return "CEP: " + this.CEP + "\nNúmero: " + this.numero + "\n" + this.cidade + ", " + this.estado;
     }
 }
