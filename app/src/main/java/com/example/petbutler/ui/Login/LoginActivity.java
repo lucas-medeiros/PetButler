@@ -32,9 +32,9 @@ public class LoginActivity extends AppCompatActivity {
         final TextView tvBDName = findViewById(R.id.tvBDName);
 
 
-        String password1 = "admin", username1 = "admin", username2 = "lucas", password2 = "1234";
+        String password1 = "admin", username1 = "admin", username2 = "lucas", password2 = "1234", password5 = "winter", password6 = "gold";
         String username3 = "professor", password3 = "professor", username4 = "adminprofessor", password4 = "adminprofessor";
-        String username5 = "luiz", username6 = "leandro", username7 = "rafael", username8 = "jonsnow";
+        String username5 = "luiz", username6 = "leandro", username7 = "rafael", username8 = "jonsnow", username9 = "jaime";
 
         final ArrayList<String> alUsername = new ArrayList<String>();
         final ArrayList<String> alPassword = new ArrayList<String>();
@@ -42,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         alPassword.add(password2);
         alPassword.add(password3);
         alPassword.add(password4);
+        alPassword.add(password5);
+        alPassword.add(password6);
         alUsername.add(username1);
         alUsername.add(username2);
         alUsername.add(username3);
@@ -50,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         alUsername.add(username6);
         alUsername.add(username7);
         alUsername.add(username8);
+        alUsername.add(username9);
 
 
         bLogin.setOnClickListener(new View.OnClickListener() {
@@ -80,13 +83,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 }
-                if(foundusername && foundpassword){
-                    //login
+                if(foundusername && foundpassword) {
                     toastLoginSuccess.show();
                     Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
                     startActivity(mainIntent);
-
-                }else if(foundusername && (foundpassword == false)){
+                }else if(foundusername && !foundpassword){
                     //senha incorreta
                     toastLoginFailed2.show();
                 }else if (username.isEmpty()) {

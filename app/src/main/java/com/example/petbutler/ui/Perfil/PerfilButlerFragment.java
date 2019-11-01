@@ -63,20 +63,20 @@ public class PerfilButlerFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, a1serv);
         ServicoList.setAdapter(adapter);
 
-        tv_notaButler.setText("4.97"); //exemplo, pegar nota no BD
-
         //teste:
-        Butler jayme = new Butler("Jayme Lannister","JLannister","lovemysister","000000001", "ringslayer@lannister.com",
-                "Não tem a mão direita",3.7,null,new Telefone("041","987654321"));
-
-        tvNome.setText(jayme.getNome().substring(0,jayme.getNome().indexOf(" ")+1));
-        tvSobrenome.setText(jayme.getNome().substring(jayme.getNome().indexOf(" ")+1));
-        tvEmail.setText(jayme.getEmail());
-        tvUsuario.setText(jayme.getLogin());
-        tvTelefone.setText(jayme.getTelefone().toString());
-        tvResumo.setText(jayme.getResumo());
-        tvCRMV.setText(jayme.getCRMV());
+        Butler jaime = new Butler("Jaime Lannister","jaime","lovemysister","000000001", "ringslayer@lannister.com",
+                "Kingslayer",3.7,null,new Telefone("041","987654321"));
+        jaime.setCRMV("1234-PR");
+        tvNome.setText(jaime.getNome().substring(0,jaime.getNome().indexOf(" ")+1));
+        tvSobrenome.setText(jaime.getNome().substring(jaime.getNome().indexOf(" ")+1));
+        tvEmail.setText(jaime.getEmail());
+        tvUsuario.setText(jaime.getLogin());
+        tvTelefone.setText(jaime.getTelefone().toString());
+        tvResumo.setText(jaime.getResumo());
+        tvCRMV.setText(jaime.getCRMV());
         //fotoPerfil... colocar foto de perfil
+
+        tv_notaButler.setText(""+jaime.getNota());
 
         imageButton_editarPerfilButler.setOnClickListener(new View.OnClickListener() {
             @Override

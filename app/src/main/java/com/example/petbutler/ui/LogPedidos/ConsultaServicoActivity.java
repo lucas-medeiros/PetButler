@@ -45,7 +45,7 @@ public class ConsultaServicoActivity extends AppCompatActivity {
             Animal ghost = new Animal("Ghost", "matador de white-walers", "Cachorro", 48.1, "grande",data,null);
             Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
                     "Não sabe de nada",4.6,null,null);
-            Butler jayme = new Butler("Jayme Lannister","JLannister","lovemysister","000000001", "ringslayer@lannister.com",
+            Butler jayme = new Butler("Jaime Lannister","JLannister","lovemysister","000000001", "ringslayer@lannister.com",
                     "Não tem a mão direita",3.7,null,null);
             final Entrega servico = new Entrega(5,new GregorianCalendar(2019,9,25),4.7,4.7,4.7,end1,"concluído",
                     JonSnow,jayme,ghost,"Entrega","Entrega de osso comprado no PetShop","Osso");

@@ -62,6 +62,10 @@
     <string name="valor">Valor</string>
     <string name="animal">Animal</string>
     <string name="descricao">Descrição</string>
+    <string name="title_activity_menu_lateral_butler">MenuLateralButlerActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

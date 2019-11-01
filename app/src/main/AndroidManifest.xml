@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.LogPedidos.ConsultaServicoActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
+        <activity
+            android:name=".ui.LogPedidos.ConsultaServicoActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,8 +50,7 @@
             android:name=".ui.MenuLateral.MenuLateralActivity"
             android:label="@string/title_activity_menu_lateral"
             android:parentActivityName=".ui.Login.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.EditarPerfil.EditarPerfilButlerActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />

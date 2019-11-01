@@ -67,7 +67,7 @@ public class PerfilClienteFragment extends Fragment {
 
         //teste:
         Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
-                "Não sabe de nada",4.6,null,new Telefone("041","123456789"));
+                "Lord Commander of the Night's Watch",4.6,null,new Telefone("041","123456789"));
         Cliente lucas = new Cliente("Lucas Medeiros","lucas","1234","06376186963", "lucascarmed@gmail.com",
                 "Eu gosto muito de churros!",4.7,null,new Telefone("041","998390804"));
 
@@ -79,12 +79,14 @@ public class PerfilClienteFragment extends Fragment {
         tvResumo.setText(JonSnow.getResumo());
         //fotoPerfil... colocar foto de perfil
 
+        /*
         tvNome.setText(lucas.getNome().substring(0,lucas.getNome().indexOf(" ")+1));
         tvSobrenome.setText(lucas.getNome().substring(lucas.getNome().indexOf(" ")+1));
         tvEmail.setText(lucas.getEmail());
         tvUsuario.setText(lucas.getLogin());
         tvTelefone.setText(lucas.getTelefone().toString());
         tvResumo.setText(lucas.getResumo());
+        */
 
 
 
