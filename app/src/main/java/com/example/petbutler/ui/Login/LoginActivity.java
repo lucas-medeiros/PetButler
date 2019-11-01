@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.petbutler.ui.Classes.Global.Global;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Cadastro.CadastroActivity;
@@ -84,6 +85,13 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
                 if(foundusername && foundpassword) {
+
+                    //apenas para testes -> pegar do BD
+                    if(username.compareTo("jaime") == 0){ //butler
+                        Global.isCliente = false;
+                    } else { //cliente
+                        Global.isCliente = true;
+                    }
                     toastLoginSuccess.show();
                     Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
                     startActivity(mainIntent);

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Global.Global;
 
 
 public class HomeFragment extends Fragment {
@@ -32,6 +33,6 @@ public class HomeFragment extends Fragment {
 
     public boolean isCliente(){ //retorna TRUE se for um cliente e FALSE se for um butler
         //pegar tag no BD
-        return false;
+        return Global.isCliente;
     }
 }

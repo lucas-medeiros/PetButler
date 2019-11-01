@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Global.Global;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,7 +44,7 @@ public class PerfilFragment extends Fragment {
 
     public boolean isCliente(){ //retorna TRUE se for um cliente e FALSE se for um bulter
         //pegar tag no BD
-        return false;
+        return Global.isCliente;
     }
 
 }
