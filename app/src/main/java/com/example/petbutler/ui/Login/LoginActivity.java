@@ -102,16 +102,15 @@ public class LoginActivity extends AppCompatActivity {
                     Pessoa usuario;
 
                     if(username.compareTo("jaime") == 0){ //butler
-                        usuario = Jaime;
+                        //Global.usuario = Jaime;
+                        Global.usuario = Jaime;
                     } else if (username.compareTo("lucas") == 0){ //cliente
-                        usuario = lucas;
+                        //Global.usuario = lucas;
+                        Global.usuario = lucas;
                     } else {
-                        usuario = JonSnow;
+                        //Global.usuario = JonSnow;
+                        Global.usuario = JonSnow;
                     }
-
-                    Global.isCliente = usuario.isCliente();
-                    Global.nome = usuario.getNome();
-                    Global.descricao = usuario.getResumo();
 
                     toastLoginSuccess.show();
                     Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);

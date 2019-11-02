@@ -1,5 +1,6 @@
 package com.example.petbutler.ui.MenuLateral;
 
+import android.content.ClipData;
 import android.os.Bundle;
 
 import com.example.petbutler.R;
@@ -57,8 +58,12 @@ public class MenuLateralActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         TextView headerUsername = headerView.findViewById(R.id.headerUsername);
         TextView headerDescription = headerView.findViewById(R.id.headerDescription);
-        headerUsername.setText(Global.nome);
-        headerDescription.setText(Global.descricao);
+        headerUsername.setText(Global.usuario.getNome());
+        headerDescription.setText(Global.usuario.getResumo());
+
+
+        //TextView notaUsuario = findViewById(R.id.nav_nota);
+        //notaUsuario.setText("" + Global.nota);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

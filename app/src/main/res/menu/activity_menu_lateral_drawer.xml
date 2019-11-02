@@ -13,10 +13,6 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/perfil" />
         <item
-            android:id="@+id/nav_nota"
-            android:icon="@android:drawable/btn_star_big_on"
-            android:title="4.97" />
-        <item
             android:id="@+id/nav_pagamento"
             android:icon="@android:drawable/ic_menu_compass"
             android:title="$ Pagamento" />

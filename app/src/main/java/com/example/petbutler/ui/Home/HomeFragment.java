@@ -33,6 +33,6 @@ public class HomeFragment extends Fragment {
 
     public boolean isCliente(){ //retorna TRUE se for um cliente e FALSE se for um butler
         //pegar tag no BD
-        return Global.isCliente;
+        return Global.usuario.isCliente();
     }
 }
