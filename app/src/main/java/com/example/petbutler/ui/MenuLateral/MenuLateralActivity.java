@@ -58,12 +58,9 @@ public class MenuLateralActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         TextView headerUsername = headerView.findViewById(R.id.headerUsername);
         TextView headerDescription = headerView.findViewById(R.id.headerDescription);
-        headerUsername.setText(Global.usuario.getNome());
+        headerUsername.setText(Global.usuario.getNota() + "\t\t" + Global.usuario.getNome());
         headerDescription.setText(Global.usuario.getResumo());
 
-
-        //TextView notaUsuario = findViewById(R.id.nav_nota);
-        //notaUsuario.setText("" + Global.nota);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

@@ -94,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     //apenas para testes -> pegar do BD
                     Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
-                            "Lord Commander of the Night's Watch",4.6,null,new Telefone("041","123456789"));
+                            "Lord Commander of the Night's Watch",4.9,null,new Telefone("041","123456789"));
                     Cliente lucas = new Cliente("Lucas Medeiros","lucas","1234","06376186963", "lucascarmed@gmail.com",
                             "Eu gosto muito de churros!",5.0,null,new Telefone("041","998390804"));
                     Butler Jaime = new Butler("Jaime Lannister","Jaime","lovemysister","000000001", "ringslayer@lannister.com",
@@ -116,17 +116,13 @@ public class LoginActivity extends AppCompatActivity {
                     Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
                     startActivity(mainIntent);
 
-                }else if(foundusername && !foundpassword){
-                    //senha incorreta
+                }else if(foundusername && !foundpassword){ //senha incorreta
                     toastLoginFailed2.show();
-                }else if (username.isEmpty()) {
-                    //campo do login em branco
+                }else if (username.isEmpty()) { //campo do login em branco
                     toastBlankLogin.show();
-                }else if (password.isEmpty()){
-                    //campo da senha em branco
+                }else if (password.isEmpty()){ //campo da senha em branco
                     toastBlankPassword.show();
-                }else{
-                    //usuario nao existe
+                }else{  //usuario nao existe
                     toastLoginFailed1.show();
                 }
             }

@@ -77,6 +77,7 @@ public class PerfilClienteFragment extends Fragment {
         tvUsuario.setText(JonSnow.getLogin());
         tvTelefone.setText(JonSnow.getTelefone().toString());
         tvResumo.setText(JonSnow.getResumo());
+        tv_notaCliente.setText("" + JonSnow.getNota());
         //fotoPerfil... colocar foto de perfil
 
         /*
@@ -86,9 +87,8 @@ public class PerfilClienteFragment extends Fragment {
         tvUsuario.setText(lucas.getLogin());
         tvTelefone.setText(lucas.getTelefone().toString());
         tvResumo.setText(lucas.getResumo());
+        tv_notaCliente.setText("" + lucas.getNota())
         */
-
-
 
         imageButton_editarPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
