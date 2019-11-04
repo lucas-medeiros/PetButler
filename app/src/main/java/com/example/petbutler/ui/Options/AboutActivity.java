@@ -18,8 +18,8 @@ public class AboutActivity extends AppCompatActivity {
 
         final TextView tv_about = findViewById(R.id.tv_about);
 
-        String about = "\n\nO app PetButler foi desenvolvido totalmente em Android Studio " +
-                "e foi criado para a disciplina de Engenharia de Software - 2019 Engenharia de Computação PUCPR\n\n" +
+        String about = "\n\nO App PetButler foi desenvolvido para a disciplina de Engenharia" +
+                " de Software \nEngenharia de Computação PUCPR - 2019\n\n" +
                 "Desenvolvedores:\n" +
                 "Lucas Medeiros\n" +
                 "Leandro Kurashiki\n" +

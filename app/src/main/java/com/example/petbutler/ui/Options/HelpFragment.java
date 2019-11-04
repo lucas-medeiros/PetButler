@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.petbutler.R;
-import com.example.petbutler.ui.LogPedidos.ConsultaServicoActivity;
 
 import java.util.ArrayList;
 
@@ -51,11 +50,16 @@ public class HelpFragment extends Fragment {
         listView_help.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getContext(), "" + i, Toast.LENGTH_SHORT).show();
 
-                if(i == 0){
+                if(i == 0){ //sobre
                     Intent aboutIntent = new Intent(getActivity(), AboutActivity.class);
                     startActivity(aboutIntent);
+                } else if(i == 1){ //versão
+                    //colocar um eater egg
+                    Toast.makeText(getActivity(), "Ghost is a good boy", Toast.LENGTH_SHORT).show();
+                } else if(i == 2){ //feedback
+                    Intent feedbackIntent = new Intent(getActivity(), FeedbackActivity.class);
+                    startActivity(feedbackIntent);
                 }
 
             }
