@@ -64,6 +64,13 @@
     <string name="descricao">Descrição</string>
     <string name="title_activity_menu_lateral_butler">MenuLateralButlerActivity</string>
     <string name="enviar">Enviar</string>
+    <string name="estado">Estado</string>
+    <string name="cidade">Cidade</string>
+    <string name="bairro">Bairro</string>
+    <string name="button">Button</string>
+    <string name="cachorro">Cachorro</string>
+    <string name="p_ssaro">Pássaro</string>
+    <string name="gato">Gato</string>
 
 
 </resources>
