@@ -4,4 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProcuraServico.PasseadorActivity"/>
+    tools:context=".ui.ProcuraServico.PasseadorActivity">
+
+    <Button
+        android:id="@+id/buttonConfirmPasseador"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewPasseador" />
+
+    <ListView
+        android:id="@+id/listViewPasseador"
+        android:layout_width="0dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBairroPasseador" />
+
+    <EditText
+        android:id="@+id/editTextEstadoPasseador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/estado"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCidadePasseador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:ems="10"
+        android:hint="@string/cidade"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEstadoPasseador" />
+
+    <EditText
+        android:id="@+id/editTextBairroPasseador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:ems="10"
+        android:hint="@string/bairro"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCidadePasseador" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPasseador"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toEndOf="@+id/editTextCidadePasseador"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonCachorroPasseador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cachorro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPassaroPasseador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/p_ssaro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGatoPasseador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gato" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
