@@ -63,6 +63,7 @@
     <string name="animal">Animal</string>
     <string name="descricao">Descrição</string>
     <string name="title_activity_menu_lateral_butler">MenuLateralButlerActivity</string>
+    <string name="enviar">Enviar</string>
 
 
 </resources>
