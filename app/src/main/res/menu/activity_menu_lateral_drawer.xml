@@ -10,15 +10,15 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_perfil"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_person_black_24dp"
             android:title="@string/perfil" />
         <item
             android:id="@+id/nav_pagamento"
-            android:icon="@android:drawable/ic_menu_compass"
-            android:title="$ Pagamento" />
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:title="Pagamento" />
         <item
             android:id="@+id/nav_logPedidos"
-            android:icon="@android:drawable/ic_menu_today"
+            android:icon="@drawable/ic_event_note_black_24dp"
             android:title="@string/logPedidos" />
         <item
             android:id="@+id/nav_emergencia"
