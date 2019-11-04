@@ -72,8 +72,8 @@
         android:contentDescription="@string/fotoPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_person_icon_foreground"
-        tools:srcCompat="@mipmap/ic_person_icon_foreground" />
+        app:srcCompat="@mipmap/ic_launcher_round"
+        tools:srcCompat="@mipmap/ic_launcher_round" />
 
     <ListView
         android:id="@+id/listView_petlist"
