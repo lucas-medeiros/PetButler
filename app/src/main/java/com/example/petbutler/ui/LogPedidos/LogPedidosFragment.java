@@ -80,7 +80,7 @@ public class LogPedidosFragment extends Fragment implements Serializable {
         logPedidos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getContext(), "" + i, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "" + i, Toast.LENGTH_SHORT).show();
 
                 if(i == 5){ //para testes -> trocar if por get pelo id (fazer um array de serviços)
                     Intent consultaServicoIntent = new Intent(getActivity(), ConsultaServicoActivity.class);
