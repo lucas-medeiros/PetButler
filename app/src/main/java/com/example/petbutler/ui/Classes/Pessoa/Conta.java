@@ -46,5 +46,8 @@ public class Conta {
         this.digitoAgencia = digitoAgencia;
     }
 
-
+    @Override
+    public String toString() {
+        return "Conta: " + this.numero + "-" + this.digitoNumero + "\nAgência: " + this.agencia + "-" + this.digitoAgencia;
+    }
 }

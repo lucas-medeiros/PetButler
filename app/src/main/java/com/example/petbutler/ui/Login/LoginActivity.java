@@ -13,7 +13,9 @@ import android.widget.Toast;
 import com.example.petbutler.ui.Classes.Animal.Animal;
 import com.example.petbutler.ui.Classes.Global.Global;
 import com.example.petbutler.ui.Classes.Pessoa.Butler;
+import com.example.petbutler.ui.Classes.Pessoa.Cartao;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
+import com.example.petbutler.ui.Classes.Pessoa.Conta;
 import com.example.petbutler.ui.Classes.Pessoa.Pessoa;
 import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
@@ -99,6 +101,11 @@ public class LoginActivity extends AppCompatActivity {
                             "Eu gosto muito de churros!",5.0,null,new Telefone("041","998390804"));
                     Butler Jaime = new Butler("Jaime Lannister","Jaime","lovemysister","000000001", "ringslayer@lannister.com",
                             "Kingslayer",3.7,null,null);
+
+                    Cartao cartao = new Cartao("0000111122226327","027",12,19,"JON SNOW",'d');
+                    Conta conta = new Conta(1234,5126,0,7);
+                    JonSnow.setCartao(cartao);
+                    Jaime.setConta(conta);
                     Pessoa usuario;
 
                     if(username.compareTo("jaime") == 0){ //butler

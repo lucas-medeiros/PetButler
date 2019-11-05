@@ -41,5 +41,11 @@
         android:label="@string/help"
         tools:layout="@layout/fragment_help" />
 
+    <fragment
+        android:id="@+id/nav_pagamento"
+        android:name="com.example.petbutler.ui.Pagamento.PagamentoFragment"
+        android:label="@string/pagamento"
+        tools:layout="@layout/fragment_pagamento" />
+
 
 </navigation>
