@@ -97,6 +97,14 @@ public abstract class Pessoa {
         this.cliente = cliente;
     }
 
+    public Foto getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Foto foto) {
+        this.foto = foto;
+    }
+
     //adicionar conteúdo dos métodos:
     public void adicionarAnimal(){
 
