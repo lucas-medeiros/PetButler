@@ -64,6 +64,16 @@
     <string name="descricao">Descrição</string>
     <string name="title_activity_menu_lateral_butler">MenuLateralButlerActivity</string>
     <string name="enviar">Enviar</string>
+    <string name="estado">Estado</string>
+    <string name="cidade">Cidade</string>
+    <string name="bairro">Bairro</string>
+    <string name="button">Button</string>
+    <string name="cachorro">Cachorro</string>
+    <string name="p_ssaro">Pássaro</string>
+    <string name="gato">Gato</string>
+    <string name="o_que_deseja_comprar">O que deseja comprar?</string>
+    <string name="endere_o_de_entrega">Endereço de entrega</string>
+    <string name="onde_encontrar_o_produto">Onde encontrar o produto?</string>
     <string name="pagamento">Pagamento</string>
     <string name="dinheiro">Dinheiro</string>
     <string name="cartao">Cartão</string>
