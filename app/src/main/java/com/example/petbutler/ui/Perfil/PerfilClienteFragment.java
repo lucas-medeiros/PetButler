@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Cadastro.AdicionarPetActivity;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
 import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.EditarPerfil.EditarPerfilClienteActivity;
@@ -102,7 +103,8 @@ public class PerfilClienteFragment extends Fragment {
         imageButton_addPet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent adicionarPetIntent = new Intent(getActivity(), AdicionarPetActivity.class);
+                startActivity(adicionarPetIntent);
             }
         });
 
