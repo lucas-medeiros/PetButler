@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -63,13 +62,13 @@ public class PerfilClienteFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, alPets);
         PetList.setAdapter(adapter);
 
-        tv_notaCliente.setText("4.97"); //exemplo, pegar nota no BD
+        //tv_notaCliente.setText("4.97"); //exemplo, pegar nota no BD
 
         //teste:
         Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
-                "Lord Commander of the Night's Watch",4.6,null,new Telefone("041","123456789"));
+                "Lord Commander of the Night's Watch",4.9,null,new Telefone("041","123456789"));
         Cliente lucas = new Cliente("Lucas Medeiros","lucas","1234","06376186963", "lucascarmed@gmail.com",
-                "Eu gosto muito de churros!",4.7,null,new Telefone("041","998390804"));
+                "Eu gosto muito de churros!",5.0,null,new Telefone("041","998390804"));
 
         tvNome.setText(JonSnow.getNome().substring(0,JonSnow.getNome().indexOf(" ")+1));
         tvSobrenome.setText(JonSnow.getNome().substring(JonSnow.getNome().indexOf(" ")+1));

@@ -6,10 +6,13 @@
       <w>andamento</w>
       <w>apenas</w>
       <w>branco</w>
+      <w>cadastrado</w>
       <w>cadastro</w>
       <w>calcula</w>
       <w>campo</w>
       <w>caracteristicas</w>
+      <w>cartao</w>
+      <w>cartão</w>
       <w>cliente</w>
       <w>clínica</w>
       <w>colocar</w>
@@ -19,6 +22,7 @@
       <w>conteúdo</w>
       <w>descricao</w>
       <w>descrição</w>
+      <w>dinheiro</w>
       <w>editar</w>
       <w>emergencia</w>
       <w>emergência</w>
@@ -38,12 +42,15 @@
       <w>nymeria</w>
       <w>opções</w>
       <w>osso</w>
+      <w>pagamento</w>
       <w>passeador</w>
       <w>pedidos</w>
       <w>pegar</w>
       <w>perfil</w>
       <w>pesquisar</w>
+      <w>petbutler</w>
       <w>petshop</w>
+      <w>possui</w>
       <w>precisa</w>
       <w>preencha</w>
       <w>prestar</w>
@@ -66,6 +73,7 @@
       <w>transporte</w>
       <w>usuario</w>
       <w>visualização</w>
+      <w>você</w>
     </words>
   </dictionary>
 </component>

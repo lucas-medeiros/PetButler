@@ -1,6 +1,5 @@
 package com.example.petbutler.ui.MenuLateral;
 
-import android.content.ClipData;
 import android.os.Bundle;
 
 import com.example.petbutler.R;
@@ -9,7 +8,6 @@ import com.example.petbutler.ui.Classes.Servicos.Servico;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -25,8 +23,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MenuLateralActivity extends AppCompatActivity {
 
@@ -61,11 +59,17 @@ public class MenuLateralActivity extends AppCompatActivity {
         headerUsername.setText(Global.usuario.getNota() + "\t\t" + Global.usuario.getNome());
         headerDescription.setText(Global.usuario.getResumo());
 
+        ImageView header_ProfilePic = headerView.findViewById(R.id.imageView_header);
+
+        if(Global.usuario.getLogin().compareToIgnoreCase("jonsnow") == 0)
+            header_ProfilePic.setImageResource(R.mipmap.ic_jonsnow_profile_round);
+        if(Global.usuario.getLogin().compareToIgnoreCase("jaime") == 0)
+            header_ProfilePic.setImageResource(R.mipmap.ic_jaime_lannister_profile_round);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_tools, R.id.nav_perfil, R.id.nav_logPedidos, R.id.nav_emergencia, R.id.nav_help)
+                R.id.nav_home, R.id.nav_tools, R.id.nav_perfil, R.id.nav_logPedidos, R.id.nav_emergencia, R.id.nav_help, R.id.nav_pagamento)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

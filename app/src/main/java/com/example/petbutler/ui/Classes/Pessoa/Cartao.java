@@ -2,14 +2,14 @@ package com.example.petbutler.ui.Classes.Pessoa;
 
 public class Cartao {
 
-    protected int numero;
-    protected int codSeguranca;
+    protected String numero;
+    protected String codSeguranca;
     protected int mesValidade; //para evitar usar a Classe Calendar
     protected int anoValidade;
     protected String nomeTitular;
     protected char tipo;
 
-    public Cartao(int numero, int codSeguranca, int mesValidade, int anoValidade, String nomeTitular, char tipo) {
+    public Cartao(String numero, String codSeguranca, int mesValidade, int anoValidade, String nomeTitular, char tipo) {
         this.numero = numero;
         this.codSeguranca = codSeguranca;
         this.mesValidade = mesValidade;
@@ -18,19 +18,19 @@ public class Cartao {
         this.tipo = tipo; //tipo == 'D' -> débito e tipo == 'C' -> crédito
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
-    public int getCodSeguranca() {
+    public String getCodSeguranca() {
         return codSeguranca;
     }
 
-    public void setCodSeguranca(int codSeguranca) {
+    public void setCodSeguranca(String codSeguranca) {
         this.codSeguranca = codSeguranca;
     }
 
@@ -70,4 +70,9 @@ public class Cartao {
         this.tipo = tipo;
     }
 
+    @Override
+    public String toString() {
+        return this.nomeTitular + "\n****-" + this.numero.substring(12) //imprime os último 4 dígitos do número
+                + "\nVálido até: " + this.toStringValidade();
+    }
 }

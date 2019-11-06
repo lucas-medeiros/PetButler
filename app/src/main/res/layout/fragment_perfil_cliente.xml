@@ -72,8 +72,7 @@
         android:contentDescription="@string/fotoPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_person_icon_foreground"
-        tools:srcCompat="@mipmap/ic_person_icon_foreground" />
+        app:srcCompat="@mipmap/ic_jonsnow_profile_round" />
 
     <ListView
         android:id="@+id/listView_petlist"
@@ -136,7 +135,7 @@
         android:contentDescription="@string/addPetbuttonDescription"
         app:layout_constraintStart_toEndOf="@+id/tv_pets"
         app:layout_constraintTop_toBottomOf="@+id/et_resumo"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
     <TextView
         android:id="@+id/et_telefone"
