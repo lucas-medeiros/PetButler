@@ -24,7 +24,6 @@ public class Hotel extends Servico {
         this.estadia = estadia;
     }
 
-
     @Override
     public void calculaValor() {
         super.calculaValor(); //To change body of generated methods, choose Tools | Templates.

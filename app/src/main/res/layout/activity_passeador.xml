@@ -12,10 +12,11 @@
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/custom_button"
-        android:text="@string/button"
+        android:text="@string/pesquisar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewPasseador" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewPasseador"
+        android:textColor="#FFFF" />
 
     <ListView
         android:id="@+id/listViewPasseador"
@@ -30,46 +31,51 @@
         android:id="@+id/editTextEstadoPasseador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/estado"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextCidadePasseador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:ems="10"
-        android:hint="@string/cidade"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEstadoPasseador" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editTextBairroPasseador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:ems="10"
         android:hint="@string/bairro"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCidadePasseador" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCidadePasseador"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextCidadePasseador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/cidade"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEstadoPasseador"
+        android:importantForAutofill="no" />
 
     <RadioGroup
         android:id="@+id/radioGroupPasseador"
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="95dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/editTextCidadePasseador"
         app:layout_constraintTop_toTopOf="parent">
 

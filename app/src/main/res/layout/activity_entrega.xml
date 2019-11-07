@@ -12,31 +12,33 @@
         android:layout_height="55dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/custom_button"
-        android:text="@string/button"
+        android:text="@string/pesquisar"
+        android:textColor="#FFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEntrega" />
 
     <EditText
         android:id="@+id/editTextComprar"
-        android:layout_width="0dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="@string/o_que_deseja_comprar"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextProduto"
-        android:layout_width="0dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="@string/onde_encontrar_o_produto"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,14 +46,15 @@
 
     <EditText
         android:id="@+id/editTextEntrega"
-        android:layout_width="0dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="@string/endere_o_de_entrega"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextProduto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

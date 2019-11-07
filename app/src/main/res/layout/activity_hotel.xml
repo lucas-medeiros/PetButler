@@ -10,38 +10,41 @@
         android:id="@+id/editTextEstadoHotel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/estado"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextCidadeHotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:ems="10"
-        android:hint="@string/cidade"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEstadoHotel" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editTextBairroHotel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:ems="10"
         android:hint="@string/bairro"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCidadeHotel" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCidadeHotel"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextCidadeHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/cidade"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEstadoHotel"
+        android:importantForAutofill="no" />
 
     <ListView
         android:id="@+id/listViewHotel"
@@ -57,20 +60,25 @@
         android:id="@+id/buttonConfirmHotel"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/custom_button"
-        android:text="@string/button"
+        android:text="@string/pesquisar"
+        android:textColor="#FFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewHotel" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewHotel"
+        tools:text="@string/pesquisar" />
 
     <RadioGroup
         android:id="@+id/radioGroupHotel"
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="100dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/editTextCidadeHotel"
         app:layout_constraintTop_toTopOf="parent">
 

@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.petbutler.R;
 
@@ -25,9 +26,9 @@ public class PasseadorActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Pesquisar passeador");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final EditText editTextEstadoPasseador = findViewById(R.id.editTextEstadoPasseador);
-        final EditText editTextCidadePasseador = findViewById(R.id.editTextCidadePasseador);
-        final EditText editTextBairroPasseador = findViewById(R.id.editTextBairroPasseador);
+        final EditText etEstadoPasseador = findViewById(R.id.editTextEstadoPasseador);
+        final EditText etCidadePasseador = findViewById(R.id.editTextCidadePasseador);
+        final EditText etBairroPasseador = findViewById(R.id.editTextBairroPasseador);
         final RadioGroup radioGroupPasseador = findViewById(R.id.radioGroupPasseador);
         final RadioButton radioButtonCachorroPasseador = findViewById(R.id.radioButtonCachorroPasseador);
         final RadioButton radioButtonPassaroPasseador = findViewById(R.id.radioButtonPassaroPasseador);
@@ -43,11 +44,18 @@ public class PasseadorActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, alpasseador);
         listViewPasseador.setAdapter(adapter);
+        listViewPasseador.setVisibility(View.INVISIBLE);
 
         buttonConfirmPasseador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(radioGroupPasseador.getCheckedRadioButtonId() == -1 || etEstadoPasseador.getText().toString().isEmpty() ||
+                        etCidadePasseador.getText().toString().isEmpty() || etBairroPasseador.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Pesquisa concluída", Toast.LENGTH_SHORT).show();
+                    listViewPasseador.setVisibility(View.VISIBLE);
+                }
             }
         });
     }

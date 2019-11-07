@@ -77,5 +77,6 @@
     <string name="pagamento">Pagamento</string>
     <string name="dinheiro">Dinheiro</string>
     <string name="cartao">Cartão</string>
+    <string name="pesquisar">Pesquisar</string>
 
 </resources>

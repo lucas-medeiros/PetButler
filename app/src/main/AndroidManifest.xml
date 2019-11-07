@@ -15,11 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Options.FeedbackActivity"
+        <activity android:name=".ui.ProcuraServico.ConsultaHotelActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
         <activity
+            android:name=".ui.Options.FeedbackActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+        <activity
             android:name=".ui.Options.AboutActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
         <activity
             android:name=".ui.LogPedidos.ConsultaServicoActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
