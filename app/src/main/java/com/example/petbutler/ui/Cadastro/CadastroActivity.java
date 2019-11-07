@@ -12,7 +12,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Pessoa.Butler;
+import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -39,7 +44,8 @@ public class CadastroActivity extends AppCompatActivity {
         final RadioGroup radioGroup = findViewById(R.id.radioGroup);
         final RadioButton radioButton_Cliente = findViewById(R.id.radioButton_Cliente);
         final RadioButton radioButton_Butler = findViewById(R.id.radioButton_Butler);
-
+        final DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("Pessoa");
+        final DatabaseReference reff2 = FirebaseDatabase.getInstance().getReference().child("Telefone");
 
 
         bConfirmar.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +77,18 @@ public class CadastroActivity extends AppCompatActivity {
                 }
 
                  else{
+                    String auxtelefone = etTelefone.getText().toString();
+                    String usuario = etUsuario.getText().toString();
+                    String ddd = auxtelefone.substring(0,3);
+                    String numero = auxtelefone.substring(3);
+                    String chave = auxtelefone.substring(0,3)+" "+auxtelefone.substring(3);
+                    Telefone telefone = new Telefone(ddd,numero);
+
+                     if(radioButton_Butler.isChecked()) {
+                         Butler novo_usuario = new Butler(etNome.getText().toString(),etSobrenome.getText().toString(), etSenha.getText().toString(), etCPF.getText().toString(), etEmail.getText().toString(), null, 0, null);
+                         reff.child(etUsuario.getText().toString()).setValue(novo_usuario);
+                     }
+                     reff2.child(chave).setValue(usuario);
                     final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
                     toastCadastroSuceso.show();
 

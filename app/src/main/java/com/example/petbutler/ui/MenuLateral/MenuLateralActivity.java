@@ -60,12 +60,12 @@ public class MenuLateralActivity extends AppCompatActivity {
         headerDescription.setText(Global.usuario.getResumo());
 
         ImageView header_ProfilePic = headerView.findViewById(R.id.imageView_header);
-
+        /*
         if(Global.usuario.getLogin().compareToIgnoreCase("jonsnow") == 0)
             header_ProfilePic.setImageResource(R.mipmap.ic_jonsnow_profile_round);
         if(Global.usuario.getLogin().compareToIgnoreCase("jaime") == 0)
             header_ProfilePic.setImageResource(R.mipmap.ic_jaime_lannister_profile_round);
-
+        */
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(

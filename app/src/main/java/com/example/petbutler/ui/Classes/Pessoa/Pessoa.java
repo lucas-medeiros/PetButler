@@ -3,7 +3,7 @@ package com.example.petbutler.ui.Classes.Pessoa;
 public abstract class Pessoa {
 
     protected String nome;
-    protected String login;
+    protected String sobrenome;
     protected String senha;
     protected String CPF;
     protected String email;
@@ -13,16 +13,15 @@ public abstract class Pessoa {
     protected boolean cliente;
     protected Telefone telefone;
 
-    public Pessoa(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
+    public Pessoa(String nome,String sobrenome, String senha, String CPF, String email, String resumo, double nota, Foto foto ) {
         this.nome = nome;
-        this.login = login;
+        this.sobrenome = sobrenome;
         this.senha = senha;
         this.CPF = CPF;
         this.email = email;
         this.resumo = resumo;
         this.nota = nota;
         this.foto = foto;
-        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -33,12 +32,12 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public String getLogin() {
-        return login;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setSobrenome(String nome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getSenha() {
@@ -71,14 +70,6 @@ public abstract class Pessoa {
 
     public void setResumo(String resumo) {
         this.resumo = resumo;
-    }
-
-    public Telefone getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(Telefone telefone) {
-        this.telefone = telefone;
     }
 
     public double getNota() {

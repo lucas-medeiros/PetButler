@@ -65,6 +65,7 @@ public class PerfilClienteFragment extends Fragment {
         //tv_notaCliente.setText("4.97"); //exemplo, pegar nota no BD
 
         //teste:
+        /*
         Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
                 "Lord Commander of the Night's Watch",4.9,null,new Telefone("041","123456789"));
         Cliente lucas = new Cliente("Lucas Medeiros","lucas","1234","06376186963", "lucascarmed@gmail.com",
@@ -78,7 +79,7 @@ public class PerfilClienteFragment extends Fragment {
         tvResumo.setText(JonSnow.getResumo());
         tv_notaCliente.setText("" + JonSnow.getNota());
         //fotoPerfil... colocar foto de perfil
-
+        */
         /*
         tvNome.setText(lucas.getNome().substring(0,lucas.getNome().indexOf(" ")+1));
         tvSobrenome.setText(lucas.getNome().substring(lucas.getNome().indexOf(" ")+1));

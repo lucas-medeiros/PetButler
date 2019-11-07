@@ -4,8 +4,8 @@ public class Cliente extends Pessoa{
 
     protected Cartao cartao;
 
-    public Cliente(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
-        super(nome, login, senha, CPF, email, resumo, nota, foto, telefone);
+    public Cliente(String nome,String sobrenome, String senha, String CPF, String email, String resumo, double nota, Foto foto) {
+        super(nome,sobrenome, senha, CPF, email, resumo, nota, foto);
         this.cartao = null;
         this.cliente = true;
     }

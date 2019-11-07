@@ -63,6 +63,7 @@ public class PerfilButlerFragment extends Fragment {
         ServicoList.setAdapter(adapter);
 
         //teste:
+        /*
         Butler jaime = new Butler("Jaime Lannister","jaime","lovemysister","000000001", "ringslayer@lannister.com",
                 "Kingslayer",3.7,null,new Telefone("041","987654321"));
         jaime.setCRMV("1234-PR");
@@ -74,9 +75,8 @@ public class PerfilButlerFragment extends Fragment {
         tvResumo.setText(jaime.getResumo());
         tvCRMV.setText(jaime.getCRMV());
         //fotoPerfil... colocar foto de perfil
-
         tv_notaButler.setText(""+jaime.getNota());
-
+        */
         imageButton_editarPerfilButler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

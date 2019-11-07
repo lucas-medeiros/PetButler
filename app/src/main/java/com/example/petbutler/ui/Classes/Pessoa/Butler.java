@@ -6,8 +6,8 @@ public class Butler extends Pessoa{
     protected String CNH;
     protected Conta conta;
 
-    public Butler(String nome, String login, String senha, String CPF, String email, String resumo, double nota, Foto foto, Telefone telefone) {
-        super(nome, login, senha, CPF, email, resumo, nota, foto, telefone);
+    public Butler(String nome,String sobrenome, String senha, String CPF, String email, String resumo, double nota, Foto foto) {
+        super(nome,sobrenome, senha, CPF, email, resumo, nota, foto);
         this.cliente = false;
     }
 

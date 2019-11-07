@@ -2,6 +2,8 @@ package com.example.petbutler.ui.Login;
 
 import android.content.Context;
 import android.content.Intent;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,9 +23,15 @@ import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Cadastro.CadastroActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.Iterator;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -39,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         final Button bCadastro = findViewById(R.id.bCadastro);
         final TextView tvBDPass = findViewById(R.id.tvBDPass);
         final TextView tvBDName = findViewById(R.id.tvBDName);
+        final DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("Pessoa");
 
 
         String password1 = "admin", username1 = "admin", username2 = "lucas", password2 = "1234", password5 = "winter", password6 = "gold";
@@ -68,8 +77,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String LoginFailed1 = "Nome de usuário não encontrado", LoginFailed2 = "Senha incorreta", LoginSucess = "Login realizado com sucesso";
-                Context context = getApplicationContext();
-                int duration = Toast.LENGTH_SHORT;
+                final Context context = getApplicationContext();
+                final int duration = Toast.LENGTH_SHORT;
                 final Toast toastLoginFailed1 = Toast.makeText(context, LoginFailed1, duration);
                 final Toast toastLoginFailed2 = Toast.makeText(context, LoginFailed2, duration);
                 final Toast toastLoginSuccess = Toast.makeText(context, LoginSucess, duration);
@@ -77,11 +86,34 @@ public class LoginActivity extends AppCompatActivity {
                 final Toast toastBlankLogin = Toast.makeText(context, "Login em branco", duration);
                 final Toast toastBlankPassword = Toast.makeText(context, "Senha em branco", duration);
 
-                boolean foundusername = false, foundpassword = false;
+                //boolean foundusername = false, foundpassword = false;
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
 
+                reff.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Iterator<DataSnapshot> lista_usuarios = dataSnapshot.getChildren().iterator();
+                        while(lista_usuarios.hasNext()){
+                            DataSnapshot usuario =  lista_usuarios.next();
+                            String DB_username = usuario.getKey().toString();
+                            //Toast teste = Toast.makeText(context,DB_username,duration);
+                            //teste.show();
+                            String DB_senha = usuario.child("senha").getValue().toString();
+                            if(DB_username.equals(username) && DB_senha.equals(password)){
+                                toastLoginSuccess.show();
+                                return;
+                            }
+                        }
+                        //toastLoginFailed.show();
+                    }
 
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+/*
                 for (int i = 0; i < alUsername.size(); i++){
                     if(username.compareTo(alUsername.get(i)) == 0){
                         foundusername = true;
@@ -92,9 +124,13 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 }
+                
+ */
+  /*
                 if(foundusername && foundpassword) {
 
                     //apenas para testes -> pegar do BD
+                    /*
                     Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
                             "Lord Commander of the Night's Watch",4.9,null,new Telefone("041","123456789"));
                     Cliente lucas = new Cliente("Lucas Medeiros","lucas","1234","06376186963", "lucascarmed@gmail.com",
@@ -131,7 +167,10 @@ public class LoginActivity extends AppCompatActivity {
                     toastBlankPassword.show();
                 }else{  //usuario nao existe
                     toastLoginFailed1.show();
+
+                   
                 }
+                  */
             }
         });
 

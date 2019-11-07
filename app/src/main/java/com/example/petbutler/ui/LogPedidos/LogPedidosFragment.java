@@ -54,6 +54,7 @@ public class LogPedidosFragment extends Fragment implements Serializable {
             serv4 = "Hospedagem\n17/09/2019 - 1/10/2019", serv5 = "Transporte até o veterinário\n11/09/2019";
 
         //objetos criados para testes (pegar valore reais do BD)
+        /*
         Endereco end1 = new Endereco("80045355",330,null, "PR","Curitiba",null);
         GregorianCalendar data = new GregorianCalendar(1998,12,27);
         Animal ghost = new Animal("Ghost", "matador de white-walers", "Cachorro", 48.1, "grande",data,null);
@@ -92,6 +93,8 @@ public class LogPedidosFragment extends Fragment implements Serializable {
         });
 
 
+
+         */
         return root;
     }
 
