@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -20,6 +21,7 @@ import com.example.petbutler.ui.Cadastro.AdicionarPetActivity;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
 import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.EditarPerfil.EditarPerfilClienteActivity;
+import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 
 import java.util.ArrayList;
 
@@ -49,10 +51,8 @@ public class PerfilClienteFragment extends Fragment {
         final TextView tvUsuario = root.findViewById(R.id.et_usuario);
         final TextView tvTelefone = root.findViewById(R.id.et_telefone);
         final TextView tvResumo = root.findViewById(R.id.et_resumo);
-        final ListView PetList = root.findViewById(R.id.listView_petlist);
         final ImageView fotoPerfil = root.findViewById(R.id.imageView_fotoPerfil);
 
-        //para teste de visualização:
         final ArrayList<String> alPets = new ArrayList<>();
         String pet1 = "Ghost", pet2 = "Summer", pet3 = "Nymeria", pet4 = "Lady";
         alPets.add(pet1);
@@ -61,7 +61,21 @@ public class PerfilClienteFragment extends Fragment {
         alPets.add(pet4);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, alPets);
+
+
+        final ListView PetList = root.findViewById(R.id.listView_petlist);
         PetList.setAdapter(adapter);
+        PetList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(),PerfilAnimalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //para teste de visualização:
+
 
         //tv_notaCliente.setText("4.97"); //exemplo, pegar nota no BD
 

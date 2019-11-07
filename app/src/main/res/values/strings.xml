@@ -86,6 +86,7 @@
     <string name="data_nasc">Data Nascimento</string>
     <string name="desc_animal">Descrição Animal</string>
     <string name="tipo_animal">Tipo Animal</string>
+    <string name="ButlerMenuTitle">Solicitações de Serviços</string>
 
 
 </resources>

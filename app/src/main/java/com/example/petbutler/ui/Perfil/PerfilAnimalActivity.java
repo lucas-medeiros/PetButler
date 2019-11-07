@@ -36,7 +36,17 @@ public class PerfilAnimalActivity extends AppCompatActivity {
         final ImageView ivFotoPet1  = findViewById(R.id.iv_fotoPet1);
         final ImageView ivFotoPet2  = findViewById(R.id.iv_fotoPet2);
 
-        Animal Ghost = new Animal("Ghost","Leal","Cachorro",20,"Grande",null,null);
+        Animal Ghost = new Animal("Ghost","Leal","Cachorro","20","1",4.8,null,null);
+
+        tvNomePet.setText(Ghost.getNome());
+        tvPesoPet.setText(Ghost.getPeso()+"kg");
+        tvTamanhoPet.setText(Ghost.getTamanho()+"m");
+        tvTipoPet.setText(Ghost.getTipo());
+        tvDataPet.setText("17/04/2011");
+        tvDescPet.setText(Ghost.getResumo());
+        tvNotaPet.setText("" + Ghost.getNota());
+
+
 
     }
 }

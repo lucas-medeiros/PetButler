@@ -43,7 +43,7 @@ public class ConsultaServicoActivity extends AppCompatActivity {
         if (ServicoID == 5){
             Endereco end1 = new Endereco("80045355",330,null, "PR","Curitiba",null);
             GregorianCalendar data = new GregorianCalendar(1998,12,27);
-            Animal ghost = new Animal("Ghost", "matador de white-walers", "Cachorro", 48.1, "grande",data,null);
+            Animal ghost = new Animal("Ghost", "matador de white-walers", "Cachorro","8.1","5",3.2,null,null);
             Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",
                     "Lord Commander of the Night's Watch",4.6,null,new Telefone("041","123456789"));
             Butler jaime = new Butler("Jaime Lannister","jaime","lovemysister","000000001", "ringslayer@lannister.com",

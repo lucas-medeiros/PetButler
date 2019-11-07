@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        tools:srcCompat="@mipmap/ic_ghost_round" />
 
     <ImageButton
         android:id="@+id/ib_editarPet"
@@ -112,25 +112,25 @@
 
     <ImageView
         android:id="@+id/iv_fotoPet1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="132dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_descPet"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        tools:srcCompat="@mipmap/ic_ghost1_round" />
 
     <ImageView
         android:id="@+id/iv_fotoPet2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="156dp"
+        android:layout_height="132dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toEndOf="@+id/iv_fotoPet1"
         app:layout_constraintTop_toBottomOf="@+id/tv_descPet"
-        tools:srcCompat="@tools:sample/avatars[11]" />
+        tools:srcCompat="@mipmap/ic_ghost2_round" />
 
     <TextView
         android:id="@+id/tv_tipoPet"
