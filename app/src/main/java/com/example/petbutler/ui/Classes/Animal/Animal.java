@@ -9,18 +9,19 @@ public class Animal {
     protected String nome;
     protected String resumo;
     protected String tipo;
-    protected double peso;
+    protected String peso;
     protected String tamanho;
     protected Calendar dataNascimento;
     protected double nota;
     protected Foto foto;
 
-    public Animal(String nome, String resumo, String tipo, double peso, String tamanho, Calendar dataNascimento, Foto foto) {
+    public Animal(String nome, String resumo, String tipo, String peso, String tamanho,double nota ,Calendar dataNascimento, Foto foto) {
         this.nome = nome;
         this.resumo = resumo;
         this.tipo = tipo;
         this.peso = peso;
         this.tamanho = tamanho;
+        this.nota = nota;
         this.dataNascimento = dataNascimento;
         this.foto = foto;
     }
@@ -49,11 +50,11 @@ public class Animal {
         this.tipo = tipo;
     }
 
-    public double getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(String peso) {
         this.peso = peso;
     }
 

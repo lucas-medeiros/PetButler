@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Pet Butler</string>
+    <string-array name="Pets">
+        <item>Cachorro</item>
+        <item>Gato</item>
+        <item>Ave</item>
+        <item>Jabuti</item>
+        <item>Roedor</item>
+    </string-array>
     <string name="mainMenuTitle">Escolha de Serviço</string>
     <string name="descriptionEmergency">Botão para emergências</string>
     <string name="passeiosTitle">Passeios</string>
@@ -77,6 +84,20 @@
     <string name="pagamento">Pagamento</string>
     <string name="dinheiro">Dinheiro</string>
     <string name="cartao">Cartão</string>
+    <string name="nome_pet">Nome Pet</string>
+    <string name="data_nascimento">Data de Nascimento</string>
+    <string name="peso_pet2">Peso Pet</string>
+    <string name="tamanho_pet">Tamanho Pet</string>
+    <string name="resumo_pet">Descrição do seu Pet</string>
+    <string name="nota_Pet">Nota Pet</string>
+    <string name="nome_pet2">Nome Pet</string>
+    <string name="peso_pet">Peso Pet</string>
+    <string name="tamanho_pet2">Tamanho Pet</string>
+    <string name="data_nasc">Data Nascimento</string>
+    <string name="desc_animal">Descrição Animal</string>
+    <string name="tipo_animal">Tipo Animal</string>
+    <string name="ButlerMenuTitle">Solicitações de Serviços</string>
     <string name="pesquisar">Pesquisar</string>
+
 
 </resources>
