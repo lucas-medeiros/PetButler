@@ -20,6 +20,11 @@
         <activity
             android:name=".ui.Options.FeedbackActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+        <activity android:name=".ui.ProcuraServico.ConsultaHotelActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
+        <activity
+            android:name=".ui.Options.FeedbackActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
         <activity
             android:name=".ui.Options.AboutActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />

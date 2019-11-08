@@ -6,14 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".ui.ProcuraServico.HotelActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <EditText
+        android:id="@+id/editTextEstadoHotel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="HOTEL ACTIVITY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/estado"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextBairroHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/bairro"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCidadeHotel"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextCidadeHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/cidade"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEstadoHotel"
+        android:importantForAutofill="no" />
+
+    <ListView
+        android:id="@+id/listViewHotel"
+        android:layout_width="0dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBairroHotel" />
+
+    <Button
+        android:id="@+id/buttonConfirmHotel"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/pesquisar"
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewHotel"
+        tools:text="@string/pesquisar" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupHotel"
+        android:layout_width="100dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toEndOf="@+id/editTextCidadeHotel"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonCachorroHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cachorro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPassaroHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/p_ssaro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGatoHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gato" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

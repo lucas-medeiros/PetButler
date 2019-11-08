@@ -24,7 +24,7 @@ public class FeedbackActivity extends AppCompatActivity {
         final EditText etFeedback = findViewById(R.id.et_feedback);
         Button bEnviarFeedback = findViewById(R.id.b_enviarFeedback);
 
-        final String text = "Esta com dificuldades?\nSe sinta a vontade para nos enviar dúvidas ou reportar problemas do aplicativo" +
+        final String text = "Esta com dificuldades?\nSe sinta a vontade para nos enviar dúvidas ou reportar problemas do aplicativo\n" +
                 "\nObrigado por nos ajudar a melhorar!";
         tvFeedback.setText(text);
 
