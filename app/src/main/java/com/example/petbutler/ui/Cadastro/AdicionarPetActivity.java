@@ -48,7 +48,8 @@ public class AdicionarPetActivity extends AppCompatActivity implements AdapterVi
         bConfirmarPet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (etNomePet.getText().toString().isEmpty() || etPesoPet.getText().toString().isEmpty() || etTamanhoPet.getText().toString().isEmpty() ||etResumoPet.getText().toString().isEmpty()) {
+                if (etNomePet.getText().toString().isEmpty() || etPesoPet.getText().toString().isEmpty()
+                        || etTamanhoPet.getText().toString().isEmpty() ||etResumoPet.getText().toString().isEmpty()) {
                     final Toast toastCampoBranco = Toast.makeText(getApplicationContext(), "Campo obrigatório não preenchido", Toast.LENGTH_SHORT);
                     toastCampoBranco.show();
                 }

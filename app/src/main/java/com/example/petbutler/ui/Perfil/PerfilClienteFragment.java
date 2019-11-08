@@ -69,15 +69,14 @@ public class PerfilClienteFragment extends Fragment {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(),PerfilAnimalActivity.class);
-                startActivity(intent);
+                if(id == 0){
+                    Intent intent = new Intent(getActivity(),PerfilAnimalActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
         //para teste de visualização:
-
-
-        //tv_notaCliente.setText("4.97"); //exemplo, pegar nota no BD
 
         //teste:
         Cliente JonSnow = new Cliente("Jon Snow","jonsnow","winter","000000000", "jonsnow@nigthswatch.com",

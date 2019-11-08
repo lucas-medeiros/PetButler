@@ -16,7 +16,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_pesoPet"
@@ -28,19 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_dataNasc" />
-
-    <EditText
-        android:id="@+id/et_tamanhoPet"
-        android:layout_width="330dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:hint="@string/tamanho_pet"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pesoPet" />
+        app:layout_constraintTop_toBottomOf="@+id/et_dataNasc"
+        android:importantForAutofill="no" />
 
     <Spinner
         android:id="@+id/spinnerPet"
@@ -58,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Tipo Animal:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +64,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerPet" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPet"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_resumoPet"
@@ -81,32 +73,46 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="@string/resumo_pet"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_tamanhoPet" />
 
+    <EditText
+        android:id="@+id/et_tamanhoPet"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="@string/tamanho_pet"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pesoPet" />
+
     <ImageButton
         android:id="@+id/ib_pet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="320dp"
-        android:layout_marginRight="320dp"
+        android:layout_width="49dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Adicionar foto de Pet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_addFoto"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toEndOf="@+id/tv_addFoto"
+        app:layout_constraintTop_toBottomOf="@+id/et_resumoPet"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
     <TextView
         android:id="@+id/tv_addFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
         android:text="Adicionar Fotos:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_resumoPet" />
 
@@ -114,11 +120,12 @@
         android:id="@+id/button_confirmarPet"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/custom_button"
         android:text="@string/button_confirmar"
         android:textColor="#FFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ib_pet" />
 

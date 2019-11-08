@@ -50,14 +50,13 @@ public class ButlerHomeFragment extends Fragment {
 
         final ListView ServList= root.findViewById(R.id.listView_servlist);
         ServList.setAdapter(adapter);
-        //ServList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-         //   @Override
-           // public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-             //   Intent intent = new Intent(getActivity(), PerfilAnimalActivity.class);
-               // startActivity(intent);
-            //}
-        //});
+        ServList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               //Intent intent = new Intent(getActivity(), PerfilAnimalActivity.class);
+               //startActivity(intent);
+            }
+        });
         return root;
     }
 
