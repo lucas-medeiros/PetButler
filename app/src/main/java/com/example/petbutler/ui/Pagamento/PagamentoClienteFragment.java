@@ -1,6 +1,7 @@
 package com.example.petbutler.ui.Pagamento;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -51,6 +52,8 @@ public class PagamentoClienteFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //intent para tela de adicionar cartão (ou nessa tela mesmo?)
+                Intent addCartaoIntent = new Intent(getActivity(), AddCartaoActivity.class);
+                startActivity(addCartaoIntent);
             }
         });
 
