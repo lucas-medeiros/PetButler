@@ -2,6 +2,7 @@
   <dictionary name="Pichau">
     <words>
       <w>adicionar</w>
+      <w>adorei</w>
       <w>ajuda</w>
       <w>andamento</w>
       <w>apenas</w>
@@ -17,6 +18,7 @@
       <w>cliente</w>
       <w>clínica</w>
       <w>colocar</w>
+      <w>comentário</w>
       <w>comprar</w>
       <w>concluída</w>
       <w>configurações</w>
@@ -33,23 +35,29 @@
       <w>endereco</w>
       <w>endereço</w>
       <w>entrega</w>
+      <w>enviado</w>
       <w>enviar</w>
       <w>grande</w>
       <w>histórico</w>
+      <w>incrível</w>
       <w>insira</w>
       <w>inválida</w>
       <w>início</w>
       <w>kingslayer</w>
+      <w>melhorias</w>
       <w>minutos</w>
+      <w>muito</w>
       <w>métodos</w>
       <w>nascimento</w>
       <w>nekomamushi</w>
       <w>nenhum</w>
       <w>nota</w>
       <w>nymeria</w>
+      <w>obrigado</w>
       <w>obrigatórios</w>
       <w>opções</w>
       <w>osso</w>
+      <w>otima</w>
       <w>pagamento</w>
       <w>passeador</w>
       <w>pedidos</w>
@@ -70,6 +78,7 @@
       <w>qual</w>
       <w>resumo</w>
       <w>retorna</w>
+      <w>ruim</w>
       <w>salvar</w>
       <w>saudável</w>
       <w>senha</w>
@@ -77,6 +86,7 @@
       <w>serviço</w>
       <w>sobre</w>
       <w>sobrenome</w>
+      <w>sucesso</w>
       <w>tamanho</w>
       <w>tipo</w>
       <w>todos</w>
@@ -84,6 +94,7 @@
       <w>usuario</w>
       <w>visualização</w>
       <w>você</w>
+      <w>ótima</w>
     </words>
   </dictionary>
 </component>

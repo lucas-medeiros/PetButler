@@ -13,12 +13,13 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Envie seu feedback"
+        android:importantForAutofill="no"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_feedback"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_feedback" />
 
     <TextView
         android:id="@+id/tv_feedback"
@@ -34,18 +35,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_avaliacao"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_feedback" />
+
     <Button
         android:id="@+id/b_enviarFeedback"
         android:layout_width="130dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custom_button"
         android:text="@string/enviar"
         android:textAllCaps="true"
         android:textColor="#FFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_feedback"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_AvaliacaoEscala" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_avaliacaoApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:rating="5"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_avaliacao" />
+
+    <TextView
+        android:id="@+id/tv_AvaliacaoEscala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar_avaliacaoApp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
