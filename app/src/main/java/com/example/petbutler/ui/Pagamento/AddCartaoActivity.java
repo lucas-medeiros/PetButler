@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Classes.Global.Global;
-import com.example.petbutler.ui.Classes.Pessoa.Butler;
 import com.example.petbutler.ui.Classes.Pessoa.Cartao;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;

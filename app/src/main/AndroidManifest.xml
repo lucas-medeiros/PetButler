@@ -15,8 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Pagamento.AddCartaoActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
+        <activity android:name=".ui.Pagamento.AddContaActivity"></activity>
+        <activity
+            android:name=".ui.Pagamento.AddCartaoActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
         <activity
             android:name=".ui.Perfil.PerfilAnimalActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
