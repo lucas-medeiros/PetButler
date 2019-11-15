@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Avaliacao.AvaliacaoButlerActivity;
+import com.example.petbutler.ui.Avaliacao.AvaliacaoClienteActivity;
 
 import java.util.ArrayList;
 
@@ -38,10 +40,11 @@ public class HelpFragment extends Fragment {
 
         final ArrayList<String> alHelp = new ArrayList<>();
 
-        String sobre = "Sobre", version = "Versão\n1.0.0", feedback = "Relatar um problema";
+        String sobre = "Sobre", version = "Versão\n1.0.0", feedback = "Relatar um problema", avaliacao = "Avalie o aplicativo";
         alHelp.add(sobre);
         alHelp.add(version);
         alHelp.add(feedback);
+        alHelp.add(avaliacao);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, alHelp);
         listView_help.setAdapter(adapter);
@@ -50,21 +53,27 @@ public class HelpFragment extends Fragment {
         listView_help.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        Intent aboutIntent = new Intent(getActivity(), AboutActivity.class);
+                        startActivity(aboutIntent);
+                        break;
+                    case 1:
+                        //colocar um eater egg
+                        Toast.makeText(getActivity(), "Ghost is a good boy", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
 
-                if(i == 0){ //sobre
-                    Intent aboutIntent = new Intent(getActivity(), AboutActivity.class);
-                    startActivity(aboutIntent);
-                } else if(i == 1){ //versão
-                    //colocar um eater egg
-                    Toast.makeText(getActivity(), "Ghost is a good boy", Toast.LENGTH_SHORT).show();
-                } else if(i == 2){ //feedback
-                    Intent feedbackIntent = new Intent(getActivity(), FeedbackActivity.class);
-                    startActivity(feedbackIntent);
+                    case 3:
+                        Intent avaliacaoIntent = new Intent(getActivity(), FeedbackActivity.class);
+                        startActivity(avaliacaoIntent);
+                        break;
+                    default:
+                        break;
                 }
 
             }
         });
-
         return root;
     }
 

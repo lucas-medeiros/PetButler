@@ -19,7 +19,7 @@ public class FeedbackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
-        getSupportActionBar().setTitle("Relatar um problema");
+        getSupportActionBar().setTitle("Feedback");
 
         final TextView tvFeedback = findViewById(R.id.tv_feedback);
         final EditText etFeedback = findViewById(R.id.et_feedback);
@@ -68,7 +68,7 @@ public class FeedbackActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Comentário enviado com sucesso\nObrigado!",Toast.LENGTH_SHORT).show();
                 String feedback = etFeedback.getText().toString();
-                int nota = ratingBar_AvaliacaoApp.getNumStars();
+                float nota = ratingBar_AvaliacaoApp.getRating();
                 //salvar feedback no BD
 
 
