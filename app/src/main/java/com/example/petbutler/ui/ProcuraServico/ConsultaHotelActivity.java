@@ -37,7 +37,7 @@ public class ConsultaHotelActivity extends AppCompatActivity {
         final Hotel grandPlaza = new Hotel(0,data,4.8,5.0,4.9,end1,"não concluído",JonSnow,Jaime,ghost,10);
 
         String text = "Grand Plaza Hotel\n\nButler responsável: " + Jaime.getNome() + " (" + Jaime.getNota() + ")\n"
-                + "Tempo de estadia máxima: " + grandPlaza.getEstadia() + " dias";
+                + "Tempo de estadia máxima: " + grandPlaza.getEstadia() + " dias" + "\nAceita todos os tipos de animais" + "\n";
         tvConsultaHotel.setText(text);
 
 

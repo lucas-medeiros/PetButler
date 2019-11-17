@@ -34,7 +34,12 @@ public class EntregaActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Insira o produto que deseja comprar",Toast.LENGTH_SHORT).show();
                 else{
                     //fazer chamado no BD dps
-                    Toast.makeText(getApplicationContext(),"Não foi possível encontrar o produto que deseja comprar",Toast.LENGTH_SHORT).show();
+                    //apenas para teste:
+                    if (etProduto.getText().toString().compareTo("ração") == 0){
+                        Toast.makeText(getApplicationContext(),"Pedido realizado com sucesso, aguarde enquanto um butler aceita seu pedido",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Não foi possível encontrar o produto que deseja comprar",Toast.LENGTH_SHORT).show();
+                    }
                 }
 
             }
