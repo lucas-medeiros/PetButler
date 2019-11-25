@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.EditarPerfil.EditarPetActivity"></activity>
+        <activity android:name=".ui.EditarPerfil.EditarPetActivity"
+            android:parentActivityName=".ui.Perfil.PerfilAnimalActivity"></activity>
         <activity
             android:name=".ui.Avaliacao.AvaliacaoButlerActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
