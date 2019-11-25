@@ -60,7 +60,7 @@ public class HelpFragment extends Fragment {
                         break;
                     case 1:
                         //colocar um eater egg
-                        Toast.makeText(getActivity(), "Ghost is a good boy", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Ghost is a good boy\nWe all love Ghost!", Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
 

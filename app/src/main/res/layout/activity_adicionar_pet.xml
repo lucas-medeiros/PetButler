@@ -120,7 +120,7 @@
         android:id="@+id/button_confirmarPet"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/custom_button"
         android:text="@string/button_confirmar"
         android:textColor="#FFFF"

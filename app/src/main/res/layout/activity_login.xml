@@ -45,17 +45,16 @@
         android:id="@+id/bLogin"
         android:layout_width="144dp"
         android:layout_height="51dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/custom_button"
         android:text="@string/button_login"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        android:background="@drawable/custom_button"
-        android:textAllCaps="true"
-        android:textColor="#FFFF"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
         android:id="@+id/tvRegisterHere"

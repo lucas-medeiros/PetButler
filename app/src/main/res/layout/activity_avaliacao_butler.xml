@@ -66,7 +66,7 @@
         android:id="@+id/button_AvaliarButler"
         android:layout_width="130dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/custom_button"
         android:text="@string/button_confirmar"
         android:textAllCaps="true"

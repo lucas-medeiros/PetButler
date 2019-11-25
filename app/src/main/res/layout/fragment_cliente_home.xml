@@ -7,71 +7,72 @@
     tools:context=".ui.Home.HomeFragment">
 
     <Button
-        android:id="@+id/buttonWalking"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/passeiosTitle"
-        app:layout_constraintEnd_toStartOf="@+id/buttonHotel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        android:background="@drawable/custom_button"
-        android:textAllCaps="true"
-        android:textColor="#FFFF"/>
-
-    <Button
         android:id="@+id/buttonHotel"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/hotelTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        android:background="@drawable/custom_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/hotel"
+        android:contentDescription="botão hotel"
         android:textAllCaps="true"
-        android:textColor="#FFFF"/>
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <Button
-        android:id="@+id/buttonProducts"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/entregasTitle"
-        app:layout_constraintEnd_toStartOf="@+id/buttonTransport"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonWalking"
-        android:background="@drawable/custom_button"
+        android:id="@+id/buttonWalking"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/passeio"
+        android:contentDescription="botão passeios"
         android:textAllCaps="true"
-        android:textColor="#FFFF"/>
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHotel"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <Button
         android:id="@+id/buttonTransport"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/transportesTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHotel"
-        android:background="@drawable/custom_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/transporte"
+        android:contentDescription="botão transporte"
         android:textAllCaps="true"
-        android:textColor="#FFFF"/>
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHotel" />
+
+    <Button
+        android:id="@+id/buttonProducts"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/entrega"
+        android:contentDescription="botão entrega"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTransport"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWalking" />
 
     <ImageButton
         android:id="@+id/imageEmergency"
-        android:layout_width="90dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/round_button"
         android:contentDescription="@string/descriptionEmergency"
+        android:src="@mipmap/ic_hospital_icon_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonTransport"
-        app:srcCompat="@mipmap/ic_local_hospital_round"
-        tools:srcCompat="@mipmap/ic_local_hospital"
-        android:background="@drawable/round_button"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonTransport" />
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -82,7 +83,7 @@
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,4 +96,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageEmergency" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,7 +53,7 @@
         android:id="@+id/b_enviarFeedback"
         android:layout_width="130dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/custom_button"
         android:text="@string/enviar"
         android:textAllCaps="true"
