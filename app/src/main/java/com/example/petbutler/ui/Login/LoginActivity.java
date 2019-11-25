@@ -2,6 +2,8 @@ package com.example.petbutler.ui.Login;
 
 import android.content.Context;
 import android.content.Intent;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,14 +18,21 @@ import com.example.petbutler.ui.Classes.Pessoa.Butler;
 import com.example.petbutler.ui.Classes.Pessoa.Cartao;
 import com.example.petbutler.ui.Classes.Pessoa.Cliente;
 import com.example.petbutler.ui.Classes.Pessoa.Conta;
+import com.example.petbutler.ui.Classes.Pessoa.Foto;
 import com.example.petbutler.ui.Classes.Pessoa.Pessoa;
 import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Cadastro.CadastroActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.Iterator;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -76,12 +85,22 @@ public class LoginActivity extends AppCompatActivity {
                 final Toast toastLoginFailed = Toast.makeText(context, "Falha no login", duration);
                 final Toast toastBlankLogin = Toast.makeText(context, "Login em branco", duration);
                 final Toast toastBlankPassword = Toast.makeText(context, "Senha em branco", duration);
+                final Toast toastConectFailed  = Toast.makeText(context, "Falha na conexão",duration);
+                final Toast toastsus1  = Toast.makeText(context, "sucesso1",duration);
+                final Toast toastsus2  = Toast.makeText(context, "sucesso2",duration);
+
+                final DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("Pessoa");
+                final DatabaseReference reff2 = FirebaseDatabase.getInstance().getReference().child("Telefone");
+                final DatabaseReference reff3 = FirebaseDatabase.getInstance().getReference().child("Butler");
+                final DatabaseReference reff4 = FirebaseDatabase.getInstance().getReference().child("Cliente");
 
                 boolean foundusername = false, foundpassword = false;
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
 
+                final Toast toastsus3  = Toast.makeText(context, "bem vindo de volta "+username,duration);
 
+                // TESTE
                 for (int i = 0; i < alUsername.size(); i++){
                     if(username.compareTo(alUsername.get(i)) == 0){
                         foundusername = true;
@@ -92,6 +111,66 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 }
+
+
+                reff.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Iterator<DataSnapshot> lista_usuarios = dataSnapshot.getChildren().iterator();
+                        while(lista_usuarios.hasNext()){
+                            DataSnapshot DB_usuario =  lista_usuarios.next();
+                            String DB_username = DB_usuario.getKey().toString();
+                            if(DB_username.equals(username)){
+                                final String DB_senha = DB_usuario.child("senha").getValue().toString();
+                                if(DB_senha.equals(password)){
+                                    final String DB_nome = DB_usuario.child("nome").getValue().toString();
+                                    final Double DB_nota = ((Double) dataSnapshot.child("nota").getValue());
+                                    String DB_resumo = null;
+                                    if(DB_usuario.child("resumo").exists()){
+                                        DB_resumo = dataSnapshot.child("resumo").getValue().toString();
+                                    }
+                                    final String DB_cpf = DB_usuario.child("cpf").getValue().toString();
+                                    final String DB_email = DB_usuario.child("email").getValue().toString();
+                                    Foto DB_foto = null;
+                                    if(DB_usuario.child("foto").exists()){
+                                        DB_foto = null;
+                                    }
+                                    final boolean DB_cliente = (Boolean)DB_usuario.child("cliente").getValue();
+
+
+                                    Global.usuario = null;
+
+                                    if(DB_cliente) {
+                                         Cliente user = new Cliente(DB_nome, DB_username, DB_senha, DB_cpf, DB_email, DB_resumo, DB_nota, DB_foto, new Telefone(null,null));
+                                          Global.usuario = user;
+                                    }
+                                    else{
+                                        Butler user = new Butler(DB_nome, DB_username, DB_senha, DB_cpf, DB_email, DB_resumo, DB_nota, DB_foto, new Telefone(null,null));
+                                        Global.usuario = user;
+                                    }
+
+                                    //Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
+                                    //startActivity(mainIntent);
+
+                                    toastsus3.show();
+
+                                    //Intent mainIntent = new Intent(LoginActivity.this, MenuLateralActivity.class);
+                                    //startActivity(mainIntent);
+
+                                }
+
+                            }
+                        }
+                        //toastLoginFailed2.show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        toastConectFailed.show();
+                    }
+                });
+
+               /*
                 if(foundusername && foundpassword) {
 
                     //apenas para testes -> pegar do BD
@@ -110,7 +189,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     if(username.compareTo("jaime") == 0){ //butler
                         //Global.usuario = Jaime;
-                        Global.usuario = Jaime;
+                       +++++++++++++++++++++++++++++++++++++
                     } else if (username.compareTo("lucas") == 0){ //cliente
                         //Global.usuario = lucas;
                         Global.usuario = lucas;
@@ -132,6 +211,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else{  //usuario nao existe
                     toastLoginFailed1.show();
                 }
+                */
             }
         });
 
@@ -151,4 +231,5 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
 }

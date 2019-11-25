@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "158131841302",
+    "firebase_url": "https://pet-butler.firebaseio.com",
+    "project_id": "pet-butler",
+    "storage_bucket": "pet-butler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158131841302:android:5fdfd04ff6ce6200afc837",
+        "android_client_info": {
+          "package_name": "com.example.petbutler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158131841302-e1mervvbm2kpc7nouom0a2pbpusb4jgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK2BdWb24Tgg7kNMMUrZmfrB-qPKprL8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158131841302-e1mervvbm2kpc7nouom0a2pbpusb4jgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

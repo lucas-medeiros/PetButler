@@ -12,7 +12,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.petbutler.R;
+import com.example.petbutler.ui.Classes.Pessoa.Butler;
+import com.example.petbutler.ui.Classes.Pessoa.Cliente;
+import com.example.petbutler.ui.Classes.Pessoa.Telefone;
 import com.example.petbutler.ui.MenuLateral.MenuLateralActivity;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -40,7 +45,10 @@ public class CadastroActivity extends AppCompatActivity {
         final RadioButton radioButton_Cliente = findViewById(R.id.radioButton_Cliente);
         final RadioButton radioButton_Butler = findViewById(R.id.radioButton_Butler);
 
-
+        final DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("Pessoa");
+        final DatabaseReference reff2 = FirebaseDatabase.getInstance().getReference().child("Telefone");
+        final DatabaseReference reff3 = FirebaseDatabase.getInstance().getReference().child("Butler");
+        final DatabaseReference reff4 = FirebaseDatabase.getInstance().getReference().child("Cliente");
 
         bConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +82,30 @@ public class CadastroActivity extends AppCompatActivity {
                     final Toast toastCadastroSuceso = Toast.makeText(getApplicationContext(), "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
                     toastCadastroSuceso.show();
 
+                    String ddd = etTelefone.getText().toString().substring(0,2);
+                    String numero = etTelefone.getText().toString().substring(2, etTelefone.getText().toString().length()-1);
+                    Telefone telefone = new Telefone(ddd,numero);
+                    if(radioButton_Butler.isChecked()){
+                        Butler usuario = new Butler(etNome.getText().toString(),etUsuario.getText().toString(),etSenha.getText().toString(),etCPF.getText().toString(),etEmail.getText().toString(),null,5.0,null,telefone);
+                        reff.child(usuario.getLogin()).child("nome").setValue(usuario.getNome());
+                        reff.child(usuario.getLogin()).child("senha").setValue(usuario.getSenha());
+                        reff.child(usuario.getLogin()).child("CPF").setValue(usuario.getCPF());
+                        reff.child(usuario.getLogin()).child("email").setValue(usuario.getEmail());
+                        reff.child(usuario.getLogin()).child("cliente").setValue(false);
+                        reff2.child(ddd+" "+numero).setValue(usuario.getLogin());
+                        reff3.child("CRMV").setValue(null);
+                        reff3.child("Carteira").setValue(null);
+                    }
+                    else{
+                        Cliente usuario = new Cliente(etNome.getText().toString(),etUsuario.getText().toString(),etSenha.getText().toString(),etCPF.getText().toString(),etEmail.getText().toString(),null,5.0,null,telefone);
+                        reff.child(usuario.getLogin()).child("nome").setValue(usuario.getNome());
+                        reff.child(usuario.getLogin()).child("senha").setValue(usuario.getSenha());
+                        reff.child(usuario.getLogin()).child("CPF").setValue(usuario.getCPF());
+                        reff.child(usuario.getLogin()).child("email").setValue(usuario.getEmail());
+                        reff.child(usuario.getLogin()).child("cliente").setValue(true);
+                        reff2.child(ddd+" "+numero).setValue(usuario.getLogin());
+                        reff4.child(usuario.getLogin()).setValue(usuario.getLogin());
+                    }
                     //SALVAR NO BD
 
 
