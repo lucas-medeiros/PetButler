@@ -24,6 +24,7 @@ public class ConsultaTransporteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_consulta_transporte);
 
         getSupportActionBar().setTitle("Consultar Transporte");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final TextView tvConsultaTransporte = findViewById(R.id.tv_ConsultaTransporte);
 

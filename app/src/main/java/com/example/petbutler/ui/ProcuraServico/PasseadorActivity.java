@@ -38,7 +38,8 @@ public class PasseadorActivity extends AppCompatActivity {
         final Button buttonConfirmPasseador = findViewById(R.id.buttonConfirmPasseador);
 
         final ArrayList<String> alpasseador = new ArrayList<>();
-        String passeador1 = "Goku", passeador2 = "Vegeta", passeador3 = "Gohan";
+        String passeador0 = "Jaime Lannister", passeador1 = "Jorah Mormont", passeador2 = "Oberyn Martell", passeador3 = "Ygritte";
+        alpasseador.add(passeador0);
         alpasseador.add(passeador1);
         alpasseador.add(passeador2);
         alpasseador.add(passeador3);

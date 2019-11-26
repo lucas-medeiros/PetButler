@@ -23,6 +23,7 @@ public class ConsultaHotelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_consultar_hotel);
 
         getSupportActionBar().setTitle("Consultar Hotel");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final TextView tvConsultaHotel = findViewById(R.id.tv_ConsultaHotel);
 
