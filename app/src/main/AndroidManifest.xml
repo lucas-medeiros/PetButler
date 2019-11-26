@@ -15,12 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Avaliacao.AvaliacaoButlerActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"></activity>
-        <activity android:name=".ui.Avaliacao.AvaliacaoClienteActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"/>
-        <activity android:name=".ui.Pagamento.AddContaActivity"
-            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity"/>
+        <activity android:name=".ui.ProcuraServico.ConsultaTransporteActivity"></activity>
+        <activity
+            android:name=".ui.Avaliacao.AvaliacaoButlerActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+        <activity
+            android:name=".ui.Avaliacao.AvaliacaoClienteActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
+        <activity
+            android:name=".ui.Pagamento.AddContaActivity"
+            android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
         <activity
             android:name=".ui.Pagamento.AddCartaoActivity"
             android:parentActivityName=".ui.MenuLateral.MenuLateralActivity" />
