@@ -48,7 +48,7 @@ public class TransporteActivity extends AppCompatActivity {
         final Button buttonConfirmaTransporte = findViewById(R.id.buttonConfirmTransporte);
 
         final ArrayList<String> a1transporte = new ArrayList<>();
-        String transportador1 = "Transportador 1", transportador2 = "Transportador 1", transportador3 = "Transportador 1";
+        String transportador1 = "Jaime Lannister", transportador2 = "Sandor Clagane", transportador3 = "Eddard Stark";
         a1transporte.add(transportador1);
         a1transporte.add(transportador2);
         a1transporte.add(transportador3);
@@ -79,9 +79,11 @@ public class TransporteActivity extends AppCompatActivity {
                 }
             }
         });
+
         ListViewTransporte.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getApplicationContext(),"Seu pedido foi enviado para o butler " + a1transporte.get(i) + "\nPor favor espere a resposta do butler",Toast.LENGTH_LONG).show();
                 if(i == 0){
                     Intent intentConsultaTransporte = new Intent(getApplicationContext(),ConsultaTransporteActivity.class);
                     intentConsultaTransporte.putExtra("HOTEL_ID",trans.getId());

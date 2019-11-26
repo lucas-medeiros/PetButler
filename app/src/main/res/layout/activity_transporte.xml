@@ -12,7 +12,7 @@
         android:id="@+id/buttonConfirmTransporte"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/custom_button"
         android:text="@string/pesquisar"
         android:textColor="#FFFF"
@@ -83,8 +83,8 @@
 
     <ListView
         android:id="@+id/transporteList"
-        android:layout_width="365dp"
-        android:layout_height="258dp"
+        android:layout_width="0dp"
+        android:layout_height="286dp"
         android:layout_marginTop="32dp"
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintHorizontal_bias="1.0"
