@@ -40,20 +40,11 @@ public class EmergenciaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(animal.getText().toString().isEmpty() || descricao.getText().toString().isEmpty() || enderecoEmergencia.getText().toString().isEmpty()){
-
-                    final Toast toastCampoBranco = Toast.makeText(getContext(), "Por favor, preencha todos os campos", Toast.LENGTH_SHORT);
-                    toastCampoBranco.show();
-
+                    Toast.makeText(getContext(), "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show();
                 } else {
-
                     //SALVAR INFO NO BD + NOTIFICAR OS BUTLERS PERTO
-
-                    final Toast emergenciaRegistrada = Toast.makeText(getContext(), "Sua emergência foi registrada com sucesso", Toast.LENGTH_SHORT);
-                    emergenciaRegistrada.show();
-
-                    //mandar a pessoa pra home ? fragment intent
+                    Toast.makeText(getContext(), "Sua emergência foi registrada com sucesso", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 

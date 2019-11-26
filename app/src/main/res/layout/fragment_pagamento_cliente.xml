@@ -76,7 +76,7 @@
         android:id="@+id/button_addCartao"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/custom_button"
         android:text="Adicionar Cartão"
         android:textAllCaps="true"

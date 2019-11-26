@@ -10,15 +10,15 @@
         android:id="@+id/button_Confirmar"
         android:layout_width="155dp"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_button"
         android:text="@string/button_confirmar"
+        android:textAllCaps="true"
+        android:textColor="#FFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        android:background="@drawable/custom_button"
-        android:textAllCaps="true"
-        android:textColor="#FFFF"/>
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
         android:id="@+id/et_nome"

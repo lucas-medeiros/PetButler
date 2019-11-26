@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,6 +57,14 @@ public class PasseadorActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Pesquisa concluída", Toast.LENGTH_SHORT).show();
                     listViewPasseador.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        listViewPasseador.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getApplicationContext(),
+                        "Seu pedido foi enviado para o butler " + alpasseador.get(i) + "\nPor favor espere a resposta do butler",Toast.LENGTH_LONG).show();
             }
         });
     }

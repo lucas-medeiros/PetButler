@@ -8,7 +8,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -20,6 +22,8 @@ import android.widget.TextView;
 
 import com.example.petbutler.R;
 import com.example.petbutler.ui.Classes.Animal.Animal;
+import com.example.petbutler.ui.EditarPerfil.EditarPerfilButlerActivity;
+import com.example.petbutler.ui.EditarPerfil.EditarPetActivity;
 
 public class PerfilAnimalActivity extends AppCompatActivity {
 
@@ -59,6 +63,14 @@ public class PerfilAnimalActivity extends AppCompatActivity {
         ivPerfilPet.setImageResource(R.mipmap.ic_ghost_round);
         ivFotoPet1.setImageResource(R.mipmap.ic_ghost1);
         ivFotoPet2.setImageResource(R.mipmap.ic_ghost2);
+
+        ibEditarPet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent editarPerfilPIntent = new Intent(PerfilAnimalActivity.this, EditarPetActivity.class);
+                startActivity(editarPerfilPIntent);
+            }
+        });
 
 
 
