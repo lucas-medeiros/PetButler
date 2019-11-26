@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProcuraServico.TransporteActivity" />
+    tools:context=".ui.ProcuraServico.TransporteActivity" >
+
+    <Button
+        android:id="@+id/buttonConfirmTransporte"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/pesquisar"
+        android:textColor="#FFFF"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.502"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/transporteList"
+        tools:text="@string/pesquisar" />
+
+    <EditText
+        android:id="@+id/editTextEnderecoTransporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:ems="10"
+        android:hint="@string/endereco"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+        map:layout_constraintEnd_toStartOf="@+id/radioGroupPets"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTempoTransporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:ems="10"
+        android:hint="@string/tempo_de_dura_o"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        map:layout_constraintEnd_toStartOf="@+id/radioGroupPets"
+        map:layout_constraintHorizontal_bias="0.6"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/editTextEnderecoTransporte" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPets"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.789"
+        map:layout_constraintStart_toEndOf="@+id/editTextEnderecoTransporte"
+        map:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonCachorroTransporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cachorro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPassaroTransporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/p_ssaro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGatoTransporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gato" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/transporteList"
+        android:layout_width="365dp"
+        android:layout_height="258dp"
+        android:layout_marginTop="32dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="1.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/editTextTempoTransporte" />
+</androidx.constraintlayout.widget.ConstraintLayout>

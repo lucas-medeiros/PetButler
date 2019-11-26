@@ -100,6 +100,7 @@
     <string name="pesquisar">Pesquisar</string>
     <string name="adicionar">Adicionar</string>
     <string name="comentario">Você pode deixar um comentário</string>
+    <string name="tempo_de_dura_o">Tempo de duração</string>
 
 
 </resources>

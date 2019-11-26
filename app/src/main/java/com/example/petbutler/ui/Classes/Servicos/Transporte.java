@@ -13,6 +13,9 @@ public class Transporte extends Servico {
         super(id, data, notaCliente, notaAnimal, notaButler, endereco, status, cliente, butler, animal);
     }
 
+    public String getStatus() {
+        return status;
+    }
     @Override
     public void calculaValor() {
         super.calculaValor(); //To change body of generated methods, choose Tools | Templates.
@@ -22,6 +25,7 @@ public class Transporte extends Servico {
     public void prestarServico() {
         super.prestarServico(); //To change body of generated methods, choose Tools | Templates.
     }
+
 
 
 }
